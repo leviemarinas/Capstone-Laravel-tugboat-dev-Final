@@ -13,7 +13,7 @@ class WebpagesController extends Controller
      */
     public function index()
     {
-        return view('Templates.sampleTemplate');
+        
     }
 
     /**

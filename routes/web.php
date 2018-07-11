@@ -14,8 +14,27 @@
 Route::get('/','WebpagesController@index');
 
 
+//Routes with CRUD and Full Resources
+Route::resource('/berth','BerthController');
+Route::resource('/contracts','ContractsController');
+Route::resource('/employees','EmployeesController');
+Route::resource('/equipments','EquipmentsController');
+Route::resource('/pier','PierController');
+Route::resource('/position','PositionController');
 Route::resource('/tugboat','TugboatController');
-Route::get('/tugboat','TugboatController@index');
+
+
+
+
+//Delete Functions use the following format
+
+// Route::get('/modulename/{databaseID}/delete','ControllerRou  te');
+
+Route::get('/berth/{intBerthID}/delete','BerthController@delete');
+Route::get('/employees/{intEmployeeID}/delete','EmployeesController@delete');
+Route::get('/pier/{intPierID}/delete','PierController@delete');
+Route::get('/position/{intPositionID}/delete','PositionController@delete');
+
 
 //Route::get('/', function () {
 //    return view('welcome');

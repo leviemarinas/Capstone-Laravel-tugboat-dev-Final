@@ -443,7 +443,6 @@
                 </form>
             </div>
         </div>
-        @include('Tugboat.card')
         <div id="cardLayout">
             <div class="row mt-3">
                 <div class="col-12 col-sm-6 col-lg-3">

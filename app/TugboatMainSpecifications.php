@@ -20,4 +20,8 @@ class TugboatMainSpecifications extends Model
         'datLastDrydocked',
         'boolDeleted',
     ];
+
+    public function tugboat(){
+        return $this->hasOne('App\Tugboat','intTTugboatMainID');
+    }
 }

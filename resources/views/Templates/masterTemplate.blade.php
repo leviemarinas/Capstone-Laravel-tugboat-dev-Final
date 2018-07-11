@@ -4,8 +4,10 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!--Scripts-->
+        @yield('externalScripts')
         @include('Templates.masterTemplateScriptsTop')
         <!--Stylesheets-->
+        @yield('externalStylesheets')
         @include('Templates.masterTemplateStyles')
     </head>
     <body>
@@ -113,12 +115,12 @@
                             <li id="maintenanceTree">
                                 <a href="#" class="has-dropdown"><i class="ion ion-ios-cog-outline"></i><span>Maintenance</span></a>
                                 <ul class="menu-dropdown">
-                                    <li><a href=""><i class="fas fa-life-ring"></i>Berth</a></li>
-                                    <li><a href=""><i class="ion ion-ios-paper"></i> Contracts</a></li>
-                                    <li><a href="buttons.html"><i class="ion ion-person"></i> Employee</a></li>
-                                    <li><a href="toastr.html"><i class="fas fa-anchor"></i> Equipment</a></li>
-                                    <li><a href="general.html"><i class="fas fa-life-ring"></i> Pier</a></li>
-                                    <li><a href="components.html"><i class="fas fa-sitemap"></i>Position</a></li>
+                                    <li id="berthMenu"><a href="/berth"><i class="fas fa-life-ring"></i>Berth</a></li>
+                                    <li id="contractsMenu"><a href=""><i class="ion ion-ios-paper"></i> Contracts</a></li>
+                                    <li id="employeesMenu"><a href="/employees"><i class="ion ion-person"></i> Employee</a></li>
+                                    <li id="equipmentsMenu"><a href="toastr.html"><i class="fas fa-anchor"></i> Equipment</a></li>
+                                    <li id="piersMenu"><a href="/pier"><i class="fas fa-life-ring"></i> Pier</a></li>
+                                    <li id="positionMenu"><a href="/position"><i class="fas fa-sitemap"></i>Position</a></li>
                                     <li id="tugboatMenu"><a href="/tugboat"><i class="ion ion-android-boat"></i> Tugboat</a></li>
                                 </ul>
                             </li>
@@ -226,6 +228,7 @@
                 </div>
                 @yield('outside')
                 <div class="main-content">
+                    @include('Messages.maintenanceValidations')
                     @yield('content')
                 </div>
             </div>

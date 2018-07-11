@@ -87,15 +87,7 @@ $(document).ready(function() {
     $('.modalClose').click(function() {
         $('#infoModal').modal('toggle');
     });
-    $('#addCard').click(function(e) {
-        e.preventDefault();
-        $('#addLayout').css('display', 'block');
-        $('#editLayout').css('display', 'none');
-        $('#cardLayout').css('display', 'none');
-        $('#detLayout').css('display', 'none');
-        $('#searchBar').css('display', 'none');
-        $('#selectViews').css('display', 'none');
-    });
+    
     $('#addLayout').css('display', 'block');
     $
     $('#delDet').click(function(s) {
