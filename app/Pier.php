@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pier extends Model
 {
     protected $table = 'tblpier';
-    protected $primaryKey = 'intPier_id';
+    protected $primaryKey = 'intPierID';
     protected $fillable = [
         'strPierName',
         'boolDeleted',
@@ -15,6 +15,6 @@ class Pier extends Model
 
     public function berth()
     {
-        return $this->hasMany('App\Berth','intBPier_id');
+        return $this->hasMany('App\Berth','intBPierID');
     }   
 }

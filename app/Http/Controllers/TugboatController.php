@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\TugboatMainSpecifications;
-
+use App\Tugboat;
 use Illuminate\Http\Request;
 
 
@@ -18,7 +18,9 @@ class TugboatController extends Controller
      */
     public function index()
     {
+
         $tugboat = TugboatMainSpecifications::all();
+        
         return view('Tugboat.index')->with('tugboats',$tugboat);
     }
 

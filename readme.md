@@ -1,6 +1,51 @@
 
 # Capstone-Tugboat-Laravel-dev
 
+
+### Development `Phase 1` update `5`
+
+### July 2018
+
+`new`
+
+* maintenance is almost complete!
+T
+`Go For IT!!`
+* the following `controllers` are back! for maintenance tables
+
+- [x] `restored` BerthController
+- [x] `restored` ContractsController
+- [x] `restored` EmployeesController
+- [x] `restored` EquipmentsController
+- [x] `restored` PierController
+- [x] `restored` PositionController
+- [x] `restored` TugboatController
+
+`welcome!!`
+
+* the following `models` has added for maintenance tables with proper `migrations`
+
+- [x] `restored` Berth
+- [x] `restored` Employees
+- [x] `restored` Equipments
+- [x] `restored` Pier
+- [x] `new` Position
+- [x] `new` Tugboat
+- [x] `new` TugboatClass
+- [x] `new` TugboatMainSpecifications
+- [x] `new` TugboatSpecifications
+
+`updated`
+
+* fixed foreign key relationship for
+
+- [x] Tugboat->TugboatClass 
+- [x] Tugboat->TugboatMainSpecifications
+- [x] Tugboat->TugboatSpecifications
+- [x] Employees->Position
+
+`hurray!`
+
 ### Development `Phase 1` update `4`
 ### July 6, 2018
 
