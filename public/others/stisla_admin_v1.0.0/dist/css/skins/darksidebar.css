@@ -1,14 +1,14 @@
 .navbar.active {
-	background-color: #fff;
+	background-color: #1f202e;
 }
 .navbar-bg {
-	background-color: #fff;
+	background-color: #1f202e;
 }
 .navbar .nav-link {
-	color: #2C2E3E;
+	color: #f2f2f2;
 }
 .navbar .nav-link:hover {
-	color: #3f4257;
+	color: #fff;
 }
 .navbar .form-inline .form-control {
 	background-color: #f2f2f2;
