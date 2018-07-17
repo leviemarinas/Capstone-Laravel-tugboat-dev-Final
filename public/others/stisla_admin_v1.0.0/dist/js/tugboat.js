@@ -84,12 +84,18 @@ $(document).ready(function() {
         $('#selectViews').css('display', 'none');
     });
     // Close Modal
-    $('.modalClose').click(function() {
-        $('#infoModal').modal('toggle');
+    $('#closeModal').click(function() {
+        $('#infoModal').modal('hide');
     });
     
-    $('#addLayout').css('display', 'block');
-    $
+    $('#addCard').click(function(e) {
+        e.preventDefault();
+        $('#addLayout').css('display', 'block');
+        $('#editLayout').css('display', 'none');
+        $('#cardLayout').css('display', 'none');
+        $('#detLayout').css('display', 'none');
+        $('#selectViews').css('display', 'none');
+    });
     $('#delDet').click(function(s) {
         s.preventDefault();
         swal({
