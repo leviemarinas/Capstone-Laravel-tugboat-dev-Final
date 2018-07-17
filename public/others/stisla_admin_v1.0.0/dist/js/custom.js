@@ -1,173 +1,129 @@
 $(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip({
-    placement:'top'
-  });
-  // Initialize Data Table
-  $('.detailedTable').DataTable({
-    columnDefs: [
-        { targets: 'noSortAction', orderable: false }
-    ],
-    responsive: true
-  });
 
-  // Carousel Change Image Speed
-  $(function(){
-      $('.carousel').carousel({
-          interval: 1800
-      });
-  });
-  
-  // Smart Wizard
-    // Step show event
-    $(".smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
-      //alert("You are on step "+stepNumber+" now");
-      if(stepPosition === 'first'){
-          $("#prev-btn").addClass('disabled');
-      }else if(stepPosition === 'final'){
-          $("#next-btn").addClass('disabled'); 
+// Smart Wizard
+
+  // Step show event
+  $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+    //alert("You are on step "+stepNumber+" now");
+    if(stepPosition === 'first'){
+        $("#prev-btn").addClass('disabled');
+    }else if(stepPosition === 'final'){
+        $("#next-btn").addClass('disabled'); 
+    }else{
+        $("#prev-btn").removeClass('disabled');
+        $("#next-btn").removeClass('disabled');
+    }
+    if($('button.sw-btn-next').hasClass('disabled')){
+      $('.sw-btn-group-extra').show();
       }else{
-          $("#prev-btn").removeClass('disabled');
-          $("#next-btn").removeClass('disabled');
+      $('.sw-btn-group-extra').hide();
       }
-      if($('button.sw-btn-next').hasClass('disabled')){
-        $('.sw-btn-group-extra').show();
-        }else{
-        $('.sw-btn-group-extra').hide();
-        }
-    });
-  
-    // Toolbar extra buttons
-    var btnViewSummary = $('<button class="btn btn-primary" >View Summary</button>')
-      .click(function(){
+  });
+
+  // Toolbar extra buttons
+  var btnViewSummary = $('<button class="btn btn-primary" >View Summary</button>')
+    .click(function(){
+      var cyl = 'cylinder';
+        var cyc = 'cycle';
+        //Main Information
+        var name = document.getElementById('AddName').value;
+        var length = document.getElementById('AddLength').value;
+        var breadth  = document.getElementById('AddBreadth').value;
+        var depth = document.getElementById('AddDepth').value;
+        var hp = document.getElementById('AddHorsePower').value;
+        var maxspeed = document.getElementById('AddMaxSpeed').value;
+        var bpull = document.getElementById('AddBollardPull').value;
+        var gton = document.getElementById('AddGTonnage').value;
+        var nton = document.getElementById('AddNTonnage').value;
+        var drydocked = document.getElementById('AddLastDryDocked').value;
+        var licensenum = document.getElementById('AddLicenseNum').value;
+        var licenseexp = document.getElementById('AddLicenseExpDate').value;
+
+        //Tugboat Specifications
+        var locbuilt = document.getElementById('AddLocBuilt').value;
+        var datebuilt = document.getElementById('AddDateBuilt').value;
+        var builder = document.getElementById('AddBuilder').value;
+        var makerpower = document.getElementById('AddMakerPower').value;
+        var hullmaterial = document.getElementById('AddHullMaterial').value;
+        var drive = document.getElementById('AddDrive').value;
+        var cylinder = document.getElementById('AddCylinder').value;
+        var cycle = document.getElementById('AddCycle').value;
+        var auxengine = document.getElementById('AddAuxEngine').value;
+         
+        //Tugboat Class
+
+        var classnum = document.getElementById('AddClassNum').value;
+        var officialnum = document.getElementById('AddOfficialNum').value;
+        var imonum = document.getElementById('AddIMONum').value;
+        var flag = document.getElementById('AddFlag').value;
+        var type = document.getElementById('AddType').value;
+        var tarea = document.getElementById('AddTradingArea').value;
+        var home = document.getElementById('AddHomePort').value;
+
+        var ispscomp = $('input[name=addISPSCompliance]:checked').val();
+        var ismsstandard = $('input[name=addCStandard]:checked').val();
+        var insurances = document.getElementById('AddInsurance1').value;
+
+        console.log(name,length, breadth, depth, hp, maxspeed, bpull, gton, nton, drydocked);
+        console.log(locbuilt, datebuilt, builder, makerpower, hullmaterial, drive, cylinder, cycle, auxengine);
+        console.log('ISPS:  ' + ispscomp + '  ISM:  ' + ismsstandard);
+        $('#viewSummaryLabel').html(name);
+
+        $('#sumName').html(name);$('#sumLength').html(length);
+        $('#sumBreadth').html(breadth);$('#sumDepth').html(depth);
+        $('#sumHorsePower').html(hp);$('#sumMaxSpeed').html(maxspeed);
+        $('#sumBollardPull').html(bpull);$('#sumGrossTonnage').html(gton);
+        $('#sumNetTonnage').html(nton);$('#sumDryDocked').html(drydocked);
+        $('#sumLicenseNum').html(licensenum);$('#sumLicenseExp').html(licenseexp);
+
+        $('#sumBuilt').html(locbuilt);$('#sumDateBuilt').html(datebuilt);
+        $('#sumMakerPower').html(makerpower);
+        $('#sumBuilder').html(builder);$('#sumHullMaterial').html(hullmaterial);
+        $('#sumDrive').html(drive);
+        $('#sumCylCycle').html(cylinder +' '+ cyl +'<br>'+ cycle +' per '+ cyc);
+        $('#sumAuxEngine').html(auxengine);
+
+        $('#sumClassNum').html(classnum);
+        $('#sumOffNum').html(officialnum);
+        $('#sumIMONum').html(imonum);
+        $('#sumFlag').html(flag);
+        $('#sumType').html(type);
+        $('#sumTradingArea').html(tarea);
+        $('#sumHomeport').html(home);
+        $('#sumISPS').html(ispscomp);
+        $('#sumISMCode').html(ismsstandard);
+        $('#sumInsurances').html(insurances);
+        
         $('#viewSummaryModal').modal('show');
-        });
-    // Smart Wizard 
-    $('.smartwizard').smartWizard({
-            selected: 0,
-            theme: 'arrows',
-            transitionEffect:'fade',
-            showStepURLhash: false,
-            toolbarSettings: {
-              toolbarButtonPosition: 'end',
-              toolbarExtraButtons: [btnViewSummary]
-            },
-            enableFinishButton: false
-            
-    });
-
-  // Go back
-  $('.btnBack').click(function(s) {
-    s.preventDefault();
-    swal({
-        title: "You haven't saved your changes",
-        text: "Are you sure you want to go back?",
-        type: "error",
-        showCancelButton: true,
-        confirmButtonClass: "btn-danger",
-        confirmButtonText: "Ok",
-        closeOnConfirm: false
-    },
-    function(){
-      if(window.location.href.indexOf("tugboat.html") > -1) {
-        window.location = "tugboat.html"
-      }
-      else if(window.location.href.indexOf("position.html") > -1) {
-      window.location = "position.html"
-      }
-    });
-  });
-
-  // Add button for all add views
-  $('.btnAdd').click(function() {
-    swal({
-      title: "New Tugboat Successfully Added!",
-      type: "success",
-      showCancelButton: false,
-      confirmButtonClass: "btn-primary",
-      confirmButtonText: "Ok",
-      closeOnConfirm: false
-  },
-    function(){
-      if(window.location.href.indexOf("tugboat.html") > -1) {
-        window.location = "tugboat.html"
-      }
-      else if(window.location.href.indexOf("position.html") > -1) {
-      window.location = "position.html"
-      }
-    });
-  });
-  
-  // Change Sort Text
-  $('.sortName').click(function() {
-      document.getElementsByClassName("sortDdown")[0].innerHTML = "Name";
-      $('.sortName').addClass('active');
-      $('.sortHP').removeClass('active');
-  });
-  $('.sortHP').click(function() {
-      document.getElementsByClassName("sortDdown")[0].innerHTML = "Horse Power";
-      $('.sortHP').addClass('active');
-      $('.sortName').removeClass('active');
-  });
-
-  // Change to Data Table View
-  $('.detView').click(function(e) {
-      e.preventDefault();
-      $('.cardView').removeClass('active');
-      $('.detView').addClass('active');
-      $('.detLayout').css('display', 'block');
-      $('.editLayout').css('display', 'none');
-      $('.cardLayout').css('display', 'none');
-      $('.sortSelect').css('display', 'none');
-  });
-  // Change to Card View
-  $('.cardView').click(function(g) {
-      g.preventDefault();
-      $('.detView').removeClass('active');
-      $('.cardView').addClass('active');
-      $('.cardLayout').css('display', 'block');
-      $('.editLayout').css('display', 'none');
-      $('.detLayout').css('display', 'none');
-      $('.sortSelect').css('display', 'block');
-  });
-  // Open Edit from Card
-  $('.editItem').click(function(e) {
-      e.preventDefault();
-      $('#infoModal').modal('hide');
-      $('.editLayout').css('display', 'block');
-      $('.cardLayout').css('display', 'none');
-      $('.detLayout').css('display', 'none');
-      $('.selectViews').css('display', 'none');
-  });
-  // Close Modal
-  $('.modalClose').click(function() {
-      $('#infoModal, #viewSummaryModal').modal('hide');
-  });
-  $('.addCard , .detAdd').click(function(e) {
-      e.preventDefault();
-      $('.addLayout').css('display', 'block');
-      $('.editLayout').css('display', 'none');
-      $('.cardLayout').css('display', 'none');
-      $('.detLayout').css('display', 'none');
-      $('.selectViews').css('display', 'none');
-  });
-  $('.delItem').click(function(q) {
-      q.preventDefault();
-      swal({
-          title: "Are you sure?",
-          text: "You will not be able to recover Energy Sun.",
-          type: "error",
-          showCancelButton: true,
-          confirmButtonClass: "btn-danger",
-          confirmButtonText: "Yes, delete it!",
-          closeOnConfirm: false
-      },
-      function(){
-          swal("Deleted!", "Energy Sun has been deleted.", "success");
       });
+  // Smart Wizard 
+  $('#smartwizard').smartWizard({
+          selected: 0,
+          theme: 'arrows',
+          transitionEffect:'fade',
+          showStepURLhash: false,
+          toolbarSettings: {
+            toolbarButtonPosition: 'end',
+            toolbarExtraButtons: [btnViewSummary]
+          },
+          enableFinishButton: false
+          
+        });
+       
+  //$('#addFinish').click(function() {
+  //  swal({
+  //    title: "New Tugboat Successfully Added!",
+  //    type: "success",
+  //    showCancelButton: false,
+  //    confirmButtonClass: "btn-primary",
+  //    confirmButtonText: "Ok",
+  //    closeOnConfirm: false
+  //},
+  //  function(){
+  //      window.location = "/tugboat/create"
+  //  });
+  //});
   });
-  
-});
 // Validate if the pictures have the proper file extension
 var _validFileExtensions = [".jpg", ".jpeg", ".png"];    
 function ValidateSingleInput(oInput) {

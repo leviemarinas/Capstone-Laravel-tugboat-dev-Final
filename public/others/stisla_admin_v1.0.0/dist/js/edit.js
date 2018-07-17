@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip({
+        placement:'top'
+    });
+
     // //Initialize Date Picker for Last Dry Docked
     // $('#editLastDryDocked').datepicker({
     //     format: 'yyyy-dd-mm',
@@ -40,6 +45,7 @@ $(document).ready(function() {
         });
             return false;
     }   
+        
     var txtTbInsurance = $(document.createElement('div'))
         .attr("id", 'TextBoxDiv' + EditctrAdd);
     txtTbInsurance.after().html('<label>Insurance #'+ EditctrAdd + ' </label>' +
@@ -55,6 +61,25 @@ $(document).ready(function() {
     ////////////////////////////////////////////
 
     // Sweet Alerts 
+    $('#btnEditgoBack').click(function(s) {
+        s.preventDefault();
+        swal({
+            title: "You haven't saved your changes",
+            text: "Are you sure you want to go back?",
+            type: "error",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Ok",
+            closeOnConfirm: true
+        },
+        function(){
+            $('#editLayout').css('display', 'none');
+            $('#cardLayout').css('display', 'block');
+            $('#detLayout').css('display', 'none');
+            $('#searchBar').css('display', 'none');
+            $('#selectViews').css('display', 'block');
+        });
+    });
     $('#btnEItemPics').click(function(s) {
         s.preventDefault();
         swal({
