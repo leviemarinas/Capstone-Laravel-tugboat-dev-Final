@@ -2,6 +2,30 @@
 	background-color: #319992 !important;
   color: #fff;
 }
+.niceCountryInputMenuDropdownContent a:hover {
+	background-color: #3DC7BE !important;
+}
+.sw-theme-arrows>ul.step-anchor>li.active>a{
+  border-color:#319992!important;
+  color:#fff
+  !important;
+  background:#319992!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.active>a:after{
+  border-left:30px solid #319992!important;
+  }
+.sw-theme-arrows::before{
+  border:10px solid #f3f3f3;
+  border-top:10px solid #319992;
+}
+.sw-theme-arrows>ul.step-anchor>li.done>a{
+  border-color:#3DC7BE!important;
+  color:#fff!important;
+  background:#3DC7BE!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.done>a:after{
+  border-left:30px solid #3DC7BE;
+  }
 .bg-primary {
 	background-color: #3DC7BE !important;
 }

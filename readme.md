@@ -146,4 +146,19 @@ added resources for controllers
         - fixed the datepicker for both edit and add views
     
     
+### July 18, 2018 04:45 AM
+
+- Added Folder
+    - `new` dist/modules/countrypicker
+            - niceCountryInput.css
+            - niceCountryInput.js
+
+- Fixed files
+    - tugboat.html
+        - fixed the countrypicker for both edit and add views
+    - /skins files 
+        - fixed the colors of wizard based on the skin selected
+    
+    
+
 

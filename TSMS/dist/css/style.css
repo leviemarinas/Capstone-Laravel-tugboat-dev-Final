@@ -8,10 +8,33 @@
  * 
  */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+.niceCountryInputMenuDropdownContent a:hover {
+	background-color: #574B90 !important;
+}
 #teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
   background-color: #39065A !important;
   color: #fff;
 }
+.sw-theme-arrows>ul.step-anchor>li.active>a{
+  border-color:#39065A!important;
+  color:#fff
+  !important;
+  background:#39065A!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.active>a:after{
+  border-left:30px solid #39065A!important;
+  }
+.sw-theme-arrows::before{
+  border-top:10px solid #39065A;
+}
+.sw-theme-arrows>ul.step-anchor>li.done>a{
+  border-color:#574B90!important;
+  color:#fff!important;
+  background:#574B90!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.done>a:after{
+  border-left:30px solid #574B90;
+  }
 body {
 	background-color: #F6F6F6;
 	font-size: 14px;
@@ -196,7 +219,7 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
 .btn-primary:focus:active,
 .btn-primary:active,
 .btn-primary:hover {
-	background-color: #4b3f82 !important;
+	background-color: #39065A !important;
 }
 .btn-round {
 	border-radius: 30px;

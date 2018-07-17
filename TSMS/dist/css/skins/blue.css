@@ -1,3 +1,27 @@
+.niceCountryInputMenuDropdownContent a:hover {
+  background-color: #182794 !important;
+}
+.sw-theme-arrows>ul.step-anchor>li.active>a{
+  border-color:#182794!important;
+  color:#fff
+  !important;
+  background:#182794!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.active>a:after{
+  border-left:30px solid #182794!important;
+  }
+.sw-theme-arrows::before{
+  border:10px solid #f3f3f3;
+  border-top:10px solid #182794;
+}
+.sw-theme-arrows>ul.step-anchor>li.done>a{
+  border-color:#3F52E3!important;
+  color:#fff!important;
+  background:#3F52E3!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.done>a:after{
+  border-left:30px solid #3F52E3;
+  }
 #teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
   background-color: #182794 !important;
   color: #fff;

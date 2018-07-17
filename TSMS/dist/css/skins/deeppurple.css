@@ -1,5 +1,29 @@
+.niceCountryInputMenuDropdownContent a:hover {
+	background-color: #39065A !important;
+}
+.sw-theme-arrows>ul.step-anchor>li.active>a{
+  border-color:rgb(32, 28, 56)!important;
+  color:#fff
+  !important;
+  background:rgb(32, 28, 56)!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.active>a:after{
+  border-left:30px solid rgb(32, 28, 56)!important;
+  }
+.sw-theme-arrows::before{
+  border:10px solid #f3f3f3;
+  border-top:10px solid rgb(32, 28, 56);
+}
+.sw-theme-arrows>ul.step-anchor>li.done>a{
+  border-color:#39065A!important;
+  color:#fff!important;
+  background:#39065A!important;
+  }
+.sw-theme-arrows>ul.step-anchor>li.done>a:after{
+  border-left:30px solid #39065A;
+  }
 #teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
-  background-color: #574B90 !important;
+  background-color: rgb(32, 28, 56) !important;
   color: #fff;
 }
 .bg-primary {
@@ -12,7 +36,7 @@ a {
 	color: #39065A;
 }
 a:hover {
-	color: #574B90;
+	color: rgb(32, 28, 56);
 }
 .btn-primary {
 	background-color: #39065A;
@@ -22,7 +46,7 @@ a:hover {
 .btn-primary:focus:active,
 .btn-primary:active,
 .btn-primary:hover {
-	background-color: #574B90 !important;
+	background-color: rgb(32, 28, 56) !important;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   background-color: #39065A;
@@ -56,7 +80,7 @@ a:hover {
   background-color: transparent;
 }
 .btn-link:hover {
-  color: #574B90;
+  color: rgb(32, 28, 56);
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
@@ -91,7 +115,7 @@ a:hover {
   border-color: #39065A;
 }
 .page-link:focus, .page-link:hover {
-  color: #574B90;
+  color: rgb(32, 28, 56);
 }
 
 .badge-primary {

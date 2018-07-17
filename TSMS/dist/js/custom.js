@@ -1,11 +1,15 @@
 $(document).ready(function(){
-    
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip();
 
-  // Initialize Data Table
-  var dtTitle = "Tugboat Services Management System"
-  var table = $('.detailedTable').DataTable( {
+    // Country Picker
+    $(".niceCountryInputSelector").each(function(i,e){
+        new NiceCountryInput(e).init();
+    });
+  // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // Initialize Data Table
+    var dtTitle = "Tugboat Services Management System"
+    var table = $('.detailedTable').DataTable( {
     columnDefs: [
         { targets: 'noSortAction', orderable: false }
     ], 
