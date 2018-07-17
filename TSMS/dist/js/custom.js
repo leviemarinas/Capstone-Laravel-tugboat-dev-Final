@@ -1,15 +1,58 @@
 $(document).ready(function(){
+    
   // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip({
-    placement:'top'
-  });
+  $('[data-toggle="tooltip"]').tooltip();
+
   // Initialize Data Table
-  $('.detailedTable').DataTable({
+  var dtTitle = "Tugboat Services Management System"
+  var table = $('.detailedTable').DataTable( {
     columnDefs: [
         { targets: 'noSortAction', orderable: false }
+    ], 
+    buttons: [
+        {
+            extend: 'copy',
+            text: '&mdash; Copy &mdash;',
+            title: dtTitle,
+            className: 'btn btn-primary',
+            exportOptions: {
+            columns: 'th:not(:last-child)',
+            }
+            },
+            {
+            extend: 'print',
+            text: '&mdash; Print &mdash;',
+            title: dtTitle,
+            className: 'btn btn-primary',
+            exportOptions: {
+            columns: 'th:not(:last-child)'
+            }
+            },
+            {
+            extend: 'pdf',
+            text: '&mdash; PDF &mdash;',
+            title: dtTitle,
+            className: 'btn btn-primary',
+            exportOptions: {
+            columns: 'th:not(:last-child)'
+            }
+            }
     ],
-    responsive: true
+    "language": {
+        "lengthMenu": 'Display <select class="custom-select custom-select form-control form-control">'+
+        '<option hidden>1000</option>'+
+        '<option value="10">10</option>'+
+        '<option value="20">25</option>'+
+        '<option value="50">50</option>'+
+        '<option value="100">100</option>'+
+        '<option value="-1">All</option>'+
+        '</select> records'},
+
+    responsive: true,
+    fade:true
   });
+ 
+    table.buttons().container().appendTo('.exportButtons');
 
   // Carousel Change Image Speed
   $(function(){
@@ -39,7 +82,7 @@ $(document).ready(function(){
   
     // Toolbar extra buttons
     var btnViewSummary = $('<button class="btn btn-primary" >View Summary</button>')
-      .click(function(){
+      .on('click',function(){
         $('#viewSummaryModal').modal('show');
         });
     // Smart Wizard 
@@ -57,7 +100,7 @@ $(document).ready(function(){
     });
 
   // Go back
-  $('.btnBack').click(function(s) {
+  $('.btnBack').on('click',function(s) {
     s.preventDefault();
     swal({
         title: "You haven't saved your changes",
@@ -79,7 +122,7 @@ $(document).ready(function(){
   });
 
   // Add button for all add views
-  $('.btnAdd').click(function() {
+  $('.btnAdd').on('click',function() {
     swal({
       title: "New Tugboat Successfully Added!",
       type: "success",
@@ -99,20 +142,21 @@ $(document).ready(function(){
   });
   
   // Change Sort Text
-  $('.sortName').click(function() {
+  $('.sortName').on('click',function() {
       document.getElementsByClassName("sortDdown")[0].innerHTML = "Name";
       $('.sortName').addClass('active');
       $('.sortHP').removeClass('active');
   });
-  $('.sortHP').click(function() {
+  $('.sortHP').on('click',function() {
       document.getElementsByClassName("sortDdown")[0].innerHTML = "Horse Power";
       $('.sortHP').addClass('active');
       $('.sortName').removeClass('active');
   });
 
   // Change to Data Table View
-  $('.detView').click(function(e) {
+  $('.detView').on('click',function(e) {
       e.preventDefault();
+      $('.cardView').css('border-radius', '0px 4.5px 4.5px 0px');
       $('.cardView').removeClass('active');
       $('.detView').addClass('active');
       $('.detLayout').css('display', 'block');
@@ -121,8 +165,9 @@ $(document).ready(function(){
       $('.sortSelect').css('display', 'none');
   });
   // Change to Card View
-  $('.cardView').click(function(g) {
+  $('.cardView').on('click',function(g) {
       g.preventDefault();
+      $('.cardView').css('border-radius', '0px');
       $('.detView').removeClass('active');
       $('.cardView').addClass('active');
       $('.cardLayout').css('display', 'block');
@@ -131,7 +176,7 @@ $(document).ready(function(){
       $('.sortSelect').css('display', 'block');
   });
   // Open Edit from Card
-  $('.editItem').click(function(e) {
+  $('.editItem').on('click',function(e) {
       e.preventDefault();
       $('#infoModal').modal('hide');
       $('.editLayout').css('display', 'block');
@@ -140,10 +185,10 @@ $(document).ready(function(){
       $('.selectViews').css('display', 'none');
   });
   // Close Modal
-  $('.modalClose').click(function() {
+  $('.modalClose').on('click',function() {
       $('#infoModal, #viewSummaryModal').modal('hide');
   });
-  $('.addCard , .detAdd').click(function(e) {
+  $('.addCard , .detAdd').on('click',function(e) {
       e.preventDefault();
       $('.addLayout').css('display', 'block');
       $('.editLayout').css('display', 'none');
@@ -151,7 +196,7 @@ $(document).ready(function(){
       $('.detLayout').css('display', 'none');
       $('.selectViews').css('display', 'none');
   });
-  $('.delItem').click(function(q) {
+  $('.delItem').on('click',function(q) {
       q.preventDefault();
       swal({
           title: "Are you sure?",

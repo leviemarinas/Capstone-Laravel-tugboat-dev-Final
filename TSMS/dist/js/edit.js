@@ -1,33 +1,16 @@
 $(document).ready(function() {
     // //Initialize Date Picker for Last Dry Docked
-    // $('#editLastDryDocked').datepicker({
-    //     format: 'yyyy-dd-mm',
-    //     uiLibrary: 'bootstrap4',
-    //     iconsLibrary: 'fontawesome'
-    // });
-    // var editlddpicker= $('#editLastDryDocked').datepicker();
-    
-    // //Initialize Date Picker for Date Built
-    // $('#editDateBuilt').datepicker({
-    //     format: 'yyyy-dd-mm',
-    //     uiLibrary: 'bootstrap4',
-    //     iconsLibrary: 'fontawesome'
-    // });
-    // var editldbpicker= $('#editDateBuilt').datepicker();
-
-    // //Initialize Date Picker for License Expiration Date
-    // $('#editLicenseExpDate').datepicker({
-    //     format: 'yyyy-dd-mm',
-    //     uiLibrary: 'bootstrap4',
-    //     iconsLibrary: 'fontawesome'
-    // });
-    // var editlcxppicker= $('#editLicenseExpDate').datepicker();
+    $('#editLastDryDocked').datepicker();
+    //Initialize Date Picker for Date Built
+    $('#editDateBuilt').datepicker();
+    //Initialize Date Picker for License Expiration Date
+    $('#editLicenseExpDate').datepicker();
 
 
     //Append another field for insurance
     var EditctrAdd = 2;
     var EditTClassCtr = 1;
-    $("#btnEditInsuranceAdd").click(function () {
+    $("#btnEditInsuranceAdd").on('click',function () {
         
     if(EditctrAdd>4 && EditTClassCtr > 3){
         swal({
@@ -55,7 +38,7 @@ $(document).ready(function() {
     ////////////////////////////////////////////
 
     // Sweet Alerts 
-    $('#btnEItemPics').click(function(s) {
+    $('#btnEItemPics').on('click',function(s) {
         s.preventDefault();
         swal({
             title: "Changes won't be undone.",
@@ -70,7 +53,7 @@ $(document).ready(function() {
             swal("Updated!", "Energy Sun's Pictures has been updated.", "success");
         });
     });
-    $('#btnEmInfoSubmit').click(function(s) {
+    $('#btnEmInfoSubmit').on('click',function(s) {
         s.preventDefault();
         swal({
             title: "Changes won't be undone.",
@@ -86,7 +69,7 @@ $(document).ready(function() {
         });
     });
     $(document).ready(function() {
-        $('#btnETSpecSubmit').click(function(s) {
+        $('#btnETSpecSubmit').on('click',function(s) {
             s.preventDefault();
             swal({
                 title: "Changes won't be undone.",
@@ -102,7 +85,7 @@ $(document).ready(function() {
             });
         });
     });
-    $('#btnETClassSubmit').click(function(s) {
+    $('#btnETClassSubmit').on('click',function(s) {
         s.preventDefault();
         swal({
             title: "Changes won't be undone.",

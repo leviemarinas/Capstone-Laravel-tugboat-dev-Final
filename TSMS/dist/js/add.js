@@ -1,40 +1,15 @@
 $(document).ready(function() {
     // Initialize Date Picker for Last Dry Docked
     
-    // $('#AddLastDryDocked').datepicker({
-    //     format: 'yyyy-dd-mm',
-    //     uiLibrary: 'bootstrap4',
-    //     iconsLibrary: 'fontawesome'
-    // });
-    // var addlddpicker= $('#AddLastDryDocked').datepicker();
-
-    // // Initialize Date Picker for Date Built
-    // $('#AddDateBuilt').datepicker({
-    //     format: 'yyyy-dd-mm',
-    //     uiLibrary: 'bootstrap4',
-    //     iconsLibrary: 'fontawesome'
-    // });
-    // var addldbpicker= $('#AddDateBuilt').datepicker();
-
-    // // Initialize Date Picker for License Expiration Date
-    // $('#AddLicenseExpDate').datepicker({
-    //     format: 'yyyy-dd-mm',
-    //     uiLibrary: 'bootstrap4',
-    //     iconsLibrary: 'fontawesome'
-    // });
-    // var addlcxppicker= $('#AddLicenseExpDate').datepicker();
-
-    // Custom Dropdown
-    // var dropdown = $('#AddFlag').dropdown({
-    //     uiLibrary: 'bootstrap4',
-    //     iconsLibrary: 'fontawesome',
-    //     valueField: 'id'
-    // });
-
+    $('#AddLastDryDocked').datepicker();
+    // Initialize Date Picker for Date Built
+    $('#AddDateBuilt').datepicker();
+    // Initialize Date Picker for License Expiration Date
+    $('#AddLicenseExpDate').datepicker();
     // Append another field for insurance
     var AddctrAdd = 2;
     var AddtClassCtr = 1;
-    $("#btnAddInsuranceAdd").click(function () {
+    $("#btnAddInsuranceAdd").on('click',function () {
 		
 	if(AddctrAdd>4 && AddtClassCtr > 3){
         swal({

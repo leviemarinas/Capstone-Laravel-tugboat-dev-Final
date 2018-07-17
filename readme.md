@@ -129,4 +129,21 @@ added resources for controllers
 - Index - no detailed view
 
 
+### July 18, 2018
+- Added files
+    - dist/css/teambuilder.css
+    - views/profile.html
+    - views/team-builder.html
+
+- Added Folders
+    - `new` dist/modules/bootstrap-datepicker
+    - `new` dist/modules/profile
+    - `new` dist/img/profile
+    - `new` dist/modules/interact
+
+- Fixed files
+    - tugboat.html
+        - fixed the datepicker for both edit and add views
+    
+    
 

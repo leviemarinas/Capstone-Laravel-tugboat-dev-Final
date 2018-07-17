@@ -1,3 +1,7 @@
+#teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
+	background-color: #319992 !important;
+  color: #fff;
+}
 .bg-primary {
 	background-color: #3DC7BE !important;
 }

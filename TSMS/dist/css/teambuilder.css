@@ -1,0 +1,9 @@
+#teamBuilder, #sectionSelected, .sectionDark{
+  background-color: #ebebeb;
+}
+#ddChoices{
+  width:200px;
+}
+a:link{
+  text-decoration: none;
+}

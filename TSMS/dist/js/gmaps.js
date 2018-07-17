@@ -43,4 +43,5 @@ $(function () {
     }
 
     google.maps.event.addDomListener(window, 'load', initMap);
+    $(document).bind("projectLoadComplete", initMap);
 });

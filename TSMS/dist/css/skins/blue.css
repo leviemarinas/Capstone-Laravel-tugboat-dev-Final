@@ -1,3 +1,7 @@
+#teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
+  background-color: #182794 !important;
+  color: #fff;
+}
 .bg-primary {
   background-color: #3F52E3 !important;
 }
@@ -8,7 +12,7 @@ a {
   color: #3F52E3;
 }
 a:hover {
-  color: #2d3db8;
+  color: #182794;
 }
 .btn-primary {
   background-color: #3F52E3;
@@ -18,7 +22,7 @@ a:hover {
 .btn-primary:focus:active,
 .btn-primary:active,
 .btn-primary:hover {
-  background-color: #2d3db8 !important;
+  background-color: #182794 !important;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   background-color: #3F52E3;
@@ -52,7 +56,7 @@ a:hover {
   background-color: transparent;
 }
 .btn-link:hover {
-  color: #2d3db8;
+  color: #182794;
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
@@ -87,7 +91,7 @@ a:hover {
   border-color: #3F52E3;
 }
 .page-link:focus, .page-link:hover {
-  color: #2d3db8;
+  color: #182794;
 }
 
 .badge-primary {
