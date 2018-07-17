@@ -1,10 +1,5 @@
 $(document).ready(function() {
-    // Initialize Tooltip
-    $('[data-toggle="tooltip"]').tooltip({
-        placement:'top'
-    });
-
-    // // Initialize Date Picker for Last Dry Docked
+    // Initialize Date Picker for Last Dry Docked
     
     // $('#AddLastDryDocked').datepicker({
     //     format: 'yyyy-dd-mm',
@@ -36,13 +31,9 @@ $(document).ready(function() {
     //     valueField: 'id'
     // });
 
-    // Go to Add View
-    //$('#addCard').click(function() {
-        
-    //});
     // Append another field for insurance
-        var AddctrAdd = 2;
-        var AddtClassCtr = 1;
+    var AddctrAdd = 2;
+    var AddtClassCtr = 1;
     $("#btnAddInsuranceAdd").click(function () {
 		
 	if(AddctrAdd>4 && AddtClassCtr > 3){
@@ -67,22 +58,6 @@ $(document).ready(function() {
 
         AddtClassCtr++;	
         AddctrAdd++;
-    });
-    // Go back
-    $('#btnAddgoBack').click(function(s) {
-        s.preventDefault();
-        swal({
-            title: "You haven't saved your changes",
-            text: "Are you sure you want to go back?",
-            type: "error",
-            showCancelButton: true,
-            confirmButtonClass: "btn-danger",
-            confirmButtonText: "Ok",
-            closeOnConfirm: false
-        },
-        function(){
-            window.location = "/tugboat"
-        });
     });
     // Prepare the preview for profile picture
     $("#AddfirstPic").change(function(){
