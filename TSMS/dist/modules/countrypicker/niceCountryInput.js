@@ -22,7 +22,7 @@ function NiceCountryInput(domElement) {
     this.i18nnofilter = this.escapeHTML($(domElement).data("i18nnofilter") || "None");
     /*create DOM elements only when not already initialized */
     $(domElement).append("<div class='niceCountryInputMenu'><span class='niceCountryInputMenuDefaultText'><a><img class='niceCountryInputMenuCountryFlag' src='' /><span>"+this.i18nwait+"…</span></a></span><div class='niceCountryInputMenuDropdown'><span class='text-primary' style='font-size: 10px;'>▼</span></div></div>");
-    $(domElement).append("<div class='niceCountryInputMenuFilter' style='display: none;'><input placeholder='"+this.i18nfilter+"…'/></div>");
+    $(domElement).append("<div class='niceCountryInputMenuFilter' style='display: none;'><input class='form-control' placeholder='"+this.i18nfilter+"…'/></div>");
     $(domElement).append("<div class='niceCountryInputMenuDropdownContent' style='display: none;' />");
     $(domElement).append("<input class='niceCountryInputMenuInputHidden' type='hidden'/>");
     /*Data attributes (selectors)*/

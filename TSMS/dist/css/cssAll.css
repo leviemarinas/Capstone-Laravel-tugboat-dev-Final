@@ -26,8 +26,3 @@ input[type=date]::-webkit-outer-spin-button {
     position: relative;
     right:5px;
 }
-.googleLogin{
-    margin-top: 12px;
-    width:250px;
-    border-radius: 50px;
-}
