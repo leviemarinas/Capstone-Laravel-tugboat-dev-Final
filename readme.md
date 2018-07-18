@@ -159,6 +159,38 @@ added resources for controllers
     - /skins files 
         - fixed the colors of wizard based on the skin selected
     
-    
+### July 19, 2018 10:33 PM
+
+- Added Folder
+    - `new` dist/modules/sweetalerts
+            - sweetalert.css
+            - sweetalert.min.js
+    - `new` dist/modules/smartwizard
+            - `new` dist/modules/smartwizard/css
+                - smart_wizard_theme_arrows.min.css
+                - smart_wizard.min.css
+            - `new` dist/modules/smartwizard/js
+                - jquery.smartWizard.min.css
+- Removed Files
+    - from dist/js
+        - sweetalert.min.js
+        - add.js
+        - custom.js
+        - edit.js
+    - from dist/css
+        - sweetalert.css
+
+- Fixed files
+    - tugboat.html & position.html
+        - fixed the file destination of sweetalerts 
+        - fixed the assets
+        - linked the new js files
+        
+- Added Files
+    - noCard.js
+    - withCard.js
+
+
+
 
 
