@@ -190,6 +190,16 @@ added resources for controllers
     - noCard.js
     - withCard.js
 
+### July 19, 2018 01:30 AM
+
+- Added Files
+    - contract.js
+    - contract.html
+
+
+
+
+
 
 
 

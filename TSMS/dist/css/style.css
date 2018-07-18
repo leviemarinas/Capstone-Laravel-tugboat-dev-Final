@@ -15,6 +15,12 @@
   background-color: #39065A !important;
   color: #fff;
 }
+.note-tooltip-content{
+  background-color:#574B90 !important;
+}
+.note-tooltip.bottom .note-tooltip-arrow{
+  border-bottom-color:#574B90 !important;
+}
 .sw-theme-arrows>ul.step-anchor>li.active>a{
   border-color:#39065A!important;
   color:#fff

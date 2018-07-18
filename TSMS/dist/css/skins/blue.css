@@ -1,6 +1,12 @@
 .niceCountryInputMenuDropdownContent a:hover {
   background-color: #182794 !important;
 }
+.note-tooltip-content{
+  background-color:#182794!important;
+}
+.note-tooltip.bottom .note-tooltip-arrow{
+  border-bottom-color:#182794!important;
+}
 .sw-theme-arrows>ul.step-anchor>li.active>a{
   border-color:#182794!important;
   color:#fff

@@ -1,6 +1,12 @@
 #teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
 	background-color: #319992 !important;
   color: #fff;
+}  
+.note-tooltip-content{
+  background-color:#3DC7BE !important;
+}
+.note-tooltip.bottom .note-tooltip-arrow{
+  border-bottom-color:#3DC7BE !important;
 }
 .niceCountryInputMenuDropdownContent a:hover {
 	background-color: #3DC7BE !important;
