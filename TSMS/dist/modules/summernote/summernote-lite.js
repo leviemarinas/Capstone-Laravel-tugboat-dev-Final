@@ -6999,10 +6999,8 @@ var HelpDialog = /** @class */ (function () {
     HelpDialog.prototype.initialize = function () {
         var $container = this.options.dialogsInBody ? this.$body : this.$editor;
         var body = [
-            '<p class="text-center">',
-            '<a href="http://summernote.org/" target="_blank">Summernote 0.8.9</a> · ',
-            '<a href="https://github.com/summernote/summernote" target="_blank">Project</a> · ',
-            '<a href="https://github.com/summernote/summernote/issues" target="_blank">Issues</a>',
+            '<p class="text-center mt-3 mb-3">',
+            '<a href="http://summernote.org/" target="_blank">Summernote</a> ',
             '</p>'
         ].join('');
         this.$dialog = this.ui.dialog({
@@ -7013,7 +7011,7 @@ var HelpDialog = /** @class */ (function () {
             callback: function ($node) {
                 $node.find('.modal-body,.note-modal-body').css({
                     'max-height': 300,
-                    'overflow': 'scroll'
+                    'overflow-y': 'scroll'
                 });
             }
         }).render().appendTo($container);

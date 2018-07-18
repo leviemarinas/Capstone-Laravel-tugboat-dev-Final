@@ -7,15 +7,9 @@
 
   <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="../dist/css/sweetalert.css">
+  <link rel="stylesheet" href="../dist/modules/sweetalerts/sweetalert.css">
   <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
-  <link rel="stylesheet" href="../dist/css/smart_wizard.min.css">
-  <link rel="stylesheet" href="../dist/css/smart_wizard_theme_arrows.min.css">
-  <link rel="stylesheet" href="../dist/css/smart_wizard_theme_circles.min.css">
-
-  <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
-  <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
-  <link rel="stylesheet" href="../dist/modules/datatables/datatables.min.css">
+  <link rel="stylesheet" href="../dist/modules/datatables/datatables.css">
   <link rel="stylesheet" href="../dist/css/demo.css">
   <link rel="stylesheet" href="../dist/css/style.css">
   <link rel="stylesheet" href="../dist/css/fontMontserrat.css">
@@ -167,13 +161,7 @@
             <li>
               <a href="#" class="has-dropdown"><i class="fas fa-wrench"></i><span>Utilities</span></a>
               <ul class="menu-dropdown">
-                <li><a href="general.html"><i class="fas fa-life-ring"></i>Berth</a></li>
-                <li><a href="components.html"><i class="ion ion-ios-paper"></i> Contracts</a></li>
-                <li><a href="buttons.html"><i class="ion ion-person"></i> Employee</a></li>
-                <li><a href="toastr.html"><i class="fas fa-anchor"></i> Equipment</a></li>
-                <li><a href="general.html"><i class="fas fa-life-ring"></i> Pier</a></li>
-                <li><a href="components.html"><i class="fas fa-sitemap"></i>Position</a></li>
-                <li><a href="toastr.html"><i class="ion ion-android-boat"></i> Tugboat</a></li>
+                <li><a href="contract.html"><i class="ion ion-ios-paper"></i> Contracts</a></li>
               </ul>
             </li>
             <li class="menu-header">OTHERS(will be removed)</li>
@@ -248,7 +236,8 @@
           </h1>
           
         <!-- Detailed Layout -->
-        <div class="detLayout mt-3">
+        <div class="detLayout">
+            <div class="exportButtons float-right"></div>
           <button class="detAdd btn btn-primary text-center border-dark bounceIn animated">
             Add
           </button>
@@ -257,12 +246,32 @@
               <thead class="thead-dark">
                 <tr>
                   <th>Position</th>
+                  <th class="noSortAction">Status</th>
                   <th class="noSortAction">Action</th>
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td>Captain</td>
+                  <td>
+                    <span class="badge badge-success">Active</span>
+                  </td>
+                  <td>
+                    <div class="ml-1 mr-1">
+                      <button class="editItem btn btn-sm btn-secondary" data-toggle="tooltip" title="Edit" role="button">
+                        <i class="miniIcon fas fa-edit custSize"></i>
+                      </button>
+                      <button class="delItem btn btn-sm btn btn-danger" data-toggle="tooltip" title="Delete">
+                        <i class="miniIcon fas fa-trash custSize"></i>
+                      </button>
+                    </div>  
+                  </td>
+                </tr>
                   <tr>
-                      <td>56684138</td>
+                      <td>Employee</td>
+                      <td>
+                        <span class="badge badge-success">Active</span>
+                      </td>
                       <td>
                         <div class="ml-1 mr-1">
                           <button class="editItem btn btn-sm btn-secondary" data-toggle="tooltip" title="Edit" role="button">
@@ -274,9 +283,25 @@
                         </div>  
                       </td>
                   </tr>
+                  <tr>
+                    <td>Admin</td>
+                    <td>
+                      <span class="badge badge-success">Active</span>
+                    </td>
+                    <td>
+                      <div class="ml-1 mr-1">
+                        <button class="editItem btn btn-sm btn-secondary" data-toggle="tooltip" title="Edit" role="button">
+                          <i class="miniIcon fas fa-edit custSize"></i>
+                        </button>
+                        <button class="delItem btn btn-sm btn btn-danger" data-toggle="tooltip" title="Delete">
+                          <i class="miniIcon fas fa-trash custSize"></i>
+                        </button>
+                      </div>  
+                    </td>
+                  </tr>
               </tbody>
             </table>
-          </div>
+          </div><br><br>
         </div>
         
         <!-- Add View -->
@@ -339,19 +364,13 @@
   <script src="../dist/modules/jquery-3.3.1.min.js"></script>
   <script src="../dist/modules/popper.js"></script>
   <script src="../dist/modules/tooltip.js"></script>
+  <script src="../dist/modules/datatables/datatables.js"></script>
   <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../dist/js/jquery.smartWizard.min.js"></script>
-  <script type="text/javascript" src="../dist/js/custom.js"></script>
-  <script type="text/javascript" src="../dist/js/edit.js"></script>
-  <script type="text/javascript" src="../dist/js/add.js"></script>
-  <script src="../dist/js/sweetalert.min.js"></script>
+  <script src="../dist/js/noCard.js"></script>
+  <script src="../dist/modules/sweetalerts/sweetalert.min.js"></script>
   <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
   <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-  <script src="../dist/modules/datatables/datatables.min.js"></script>
   <script src="../dist/js/sa-functions.js"></script>
-  
-  <script src="../dist/modules/chart.min.js"></script>
-  <script src="../dist/modules/summernote/summernote-lite.js"></script>
   <script src="../dist/js/scripts.js"></script>
   <script src="../dist/js/demo.js"></script>
 </body>

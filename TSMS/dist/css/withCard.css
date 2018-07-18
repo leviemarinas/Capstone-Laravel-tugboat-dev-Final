@@ -18,7 +18,7 @@
 .modal {
   max-width: 100%;
 }
-#EditsecPic, #EditfirstPic, #EditthirdPic,#AddsecPic, #AddfirstPic, #AddthirdPic{
+#editSecPic, #editFirstPic, #editThirdPic,#AddsecPic, #AddfirstPic, #AddthirdPic{
   cursor:pointer;
 }
 .addCard{
