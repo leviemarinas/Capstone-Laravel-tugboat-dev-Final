@@ -670,11 +670,11 @@ var popover = renderer.create([
         $node.find('.note-popover-arrow').hide();
     }
 });
-var checkbox = renderer.create('<div class="checkbox"></div>', function ($node, options) {
+var checkbox = renderer.create('<div class="custom-control custom-checkbox"></div>', function ($node, options) {
     $node.html([
-        ' <label' + (options.id ? ' for="' + options.id + '"' : '') + '>',
-        ' <input type="checkbox"' + (options.id ? ' id="' + options.id + '"' : ''),
+        '<input type="checkbox" class="custom-control-input" ' + (options.id ? ' id="' + options.id + '"' : ''),
         (options.checked ? ' checked' : '') + '/>',
+        '<label class="custom-control-label"' + (options.id ? ' for="' + options.id + '"' : '') + '>',
         (options.text ? options.text : ''),
         '</label>'
     ].join(''));
@@ -7000,7 +7000,7 @@ var HelpDialog = /** @class */ (function () {
         var $container = this.options.dialogsInBody ? this.$body : this.$editor;
         var body = [
             '<p class="text-center mt-3 mb-3">',
-            '<a href="http://summernote.org/" target="_blank">Summernote</a> ',
+            '<a href="http://summernote.org/" target="_blank">&copy; Summernote</a> ',
             '</p>'
         ].join('');
         this.$dialog = this.ui.dialog({
@@ -7010,7 +7010,7 @@ var HelpDialog = /** @class */ (function () {
             footer: body,
             callback: function ($node) {
                 $node.find('.modal-body,.note-modal-body').css({
-                    'max-height': 300,
+                    'max-height': 400,
                     'overflow-y': 'scroll'
                 });
             }

@@ -1,6 +1,92 @@
 
 # Capstone-Tugboat-Laravel-dev
 
+### July 21, 2018 12:14 Am
+- Added files
+    - dist/css/skins/maroon.css
+- Added folder
+    - dist/modules/waves
+        - waves.css
+        - waves.js
+- Fixed files
+    - position.html
+        - add and edit views are now in modal
+    - added toastr to:
+        - team-builder.html
+        - contract.html
+-  Removed Files
+    - from dist/css
+        - fontMontserrat.css
+        - fontOpenSans.css
+        - noCard.css
+
+### July 19, 2018 01:30 AM
+
+- Added Files
+    - contract.js
+    - contract.html
+
+### July 19, 2018 10:33 PM
+
+- Added Folder
+    - `new` dist/modules/sweetalerts
+            - sweetalert.css
+            - sweetalert.min.js
+    - `new` dist/modules/smartwizard
+            - `new` dist/modules/smartwizard/css
+                - smart_wizard_theme_arrows.min.css
+                - smart_wizard.min.css
+            - `new` dist/modules/smartwizard/js
+                - jquery.smartWizard.min.css
+- Removed Files
+    - from dist/js
+        - sweetalert.min.js
+        - add.js
+        - custom.js
+        - edit.js
+    - from dist/css
+        - sweetalert.css
+
+- Fixed files
+    - tugboat.html & position.html
+        - fixed the file destination of sweetalerts 
+        - fixed the assets
+        - linked the new js files
+        
+- Added Files
+    - noCard.js
+    - withCard.js
+
+
+### July 18, 2018 04:45 AM
+
+- Added Folder
+    - `new` dist/modules/countrypicker
+            - niceCountryInput.css
+            - niceCountryInput.js
+
+- Fixed files
+    - tugboat.html
+        - fixed the countrypicker for both edit and add views
+    - /skins files 
+        - fixed the colors of wizard based on the skin selected
+
+### July 18, 2018
+- Added files
+    - dist/css/teambuilder.css
+    - views/profile.html
+    - views/team-builder.html
+
+- Added Folders
+    - `new` dist/modules/bootstrap-datepicker
+    - `new` dist/modules/profile
+    - `new` dist/img/profile
+    - `new` dist/modules/interact
+
+- Fixed files
+    - tugboat.html
+        - fixed the datepicker for both edit and add views
+
 ### Development `Phase 1` update `4`
 ### July 6, 2018
 
@@ -62,6 +148,14 @@ The Following Controllers has been `deleted` for now, these controllers may caus
 * added `stisla admin` assets in the public folder 
 * `adminLTE`template is now `replaced`
 
+
+### May 28, 2018
+###### Added 3 INITIAL Views
+- Create - completed the necessary ui
+- Edit - not fully working
+- Index - no detailed view
+
+
 ### Development `Phase 1` update `1`
 
 ### May 19, 2018
@@ -120,87 +214,4 @@ The Following Controllers has been `deleted` for now, these controllers may caus
 - [x] WebpagesController
 
 added resources for controllers 
-
-
-### May 28, 2018
-###### Added 3 INITIAL Views
-- Create - completed the necessary ui
-- Edit - not fully working
-- Index - no detailed view
-
-
-### July 18, 2018
-- Added files
-    - dist/css/teambuilder.css
-    - views/profile.html
-    - views/team-builder.html
-
-- Added Folders
-    - `new` dist/modules/bootstrap-datepicker
-    - `new` dist/modules/profile
-    - `new` dist/img/profile
-    - `new` dist/modules/interact
-
-- Fixed files
-    - tugboat.html
-        - fixed the datepicker for both edit and add views
-    
-    
-### July 18, 2018 04:45 AM
-
-- Added Folder
-    - `new` dist/modules/countrypicker
-            - niceCountryInput.css
-            - niceCountryInput.js
-
-- Fixed files
-    - tugboat.html
-        - fixed the countrypicker for both edit and add views
-    - /skins files 
-        - fixed the colors of wizard based on the skin selected
-    
-### July 19, 2018 10:33 PM
-
-- Added Folder
-    - `new` dist/modules/sweetalerts
-            - sweetalert.css
-            - sweetalert.min.js
-    - `new` dist/modules/smartwizard
-            - `new` dist/modules/smartwizard/css
-                - smart_wizard_theme_arrows.min.css
-                - smart_wizard.min.css
-            - `new` dist/modules/smartwizard/js
-                - jquery.smartWizard.min.css
-- Removed Files
-    - from dist/js
-        - sweetalert.min.js
-        - add.js
-        - custom.js
-        - edit.js
-    - from dist/css
-        - sweetalert.css
-
-- Fixed files
-    - tugboat.html & position.html
-        - fixed the file destination of sweetalerts 
-        - fixed the assets
-        - linked the new js files
-        
-- Added Files
-    - noCard.js
-    - withCard.js
-
-### July 19, 2018 01:30 AM
-
-- Added Files
-    - contract.js
-    - contract.html
-
-
-
-
-
-
-
-
 

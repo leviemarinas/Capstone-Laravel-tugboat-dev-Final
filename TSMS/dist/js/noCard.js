@@ -7,7 +7,7 @@ $('.btnBack').on('click',function(s) {
       text: "Are you sure you want to go back?",
       type: "error",
       showCancelButton: true,
-      confirmButtonClass: "btn-danger",
+      confirmButtonClass: "btn-danger waves-effect",
       confirmButtonText: "Ok",
       closeOnConfirm: false
   },
@@ -54,7 +54,7 @@ buttons: [
         extend: 'copy',
         text: '&mdash; Copy &mdash;',
         title: dtTitle,
-        className: 'btn btn-primary',
+        className: 'btn btn-primary waves-effect',
         exportOptions: {
         columns: 'th:not(:last-child)',
         }
@@ -63,7 +63,7 @@ buttons: [
         extend: 'print',
         text: '&mdash; Print &mdash;',
         title: dtTitle,
-        className: 'btn btn-primary',
+        className: 'btn btn-primary waves-effect',
         exportOptions: {
         columns: 'th:not(:last-child)'
         }
@@ -72,7 +72,7 @@ buttons: [
         extend: 'pdf',
         text: '&mdash; PDF &mdash;',
         title: dtTitle,
-        className: 'btn btn-primary',
+        className: 'btn btn-primary waves-effect',
         exportOptions: {
         columns: 'th:not(:last-child)'
         }
@@ -94,24 +94,27 @@ buttons: [
 
   table.buttons().container().appendTo('.exportButtons');
 
-  $('.editItem').on('click',function(e) {
-    e.preventDefault();
-    $('#infoModal').modal('hide');
-    $('.editLayout').css('display', 'block');
-    $('.cardLayout').css('display', 'none');
-    $('.detLayout').css('display', 'none');
-    $('.selectViews').css('display', 'none');
+  $('.toast-close-button').css('color','black');
+  toastr.options = {
+    "closeButton": true,
+    "positionClass": "toast-top-center",
+    "showDuration": "5000",
+    "hideDuration": "1000",
+    "timeOut": "2000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+  $('.buttons-pdf').on('click',function() {
+    toastr.success('PDF Downloaded!');
   });
 
-  $('.addCard , .detAdd').on('click',function(e) {
-    e.preventDefault();
-    $('.addLayout').css('display', 'block');
-    $('.editLayout').css('display', 'none');
-    $('.cardLayout').css('display', 'none');
-    $('.detLayout').css('display', 'none');
-    $('.selectViews').css('display', 'none');
-  });
-
+  // Close Modal
+  $('.modalClose').on('click',function() {
+    $('#editModal, #addModal').modal('hide');
+});
   $('.delItem').on('click',function(q) {
     q.preventDefault();
     swal({
@@ -119,13 +122,27 @@ buttons: [
         text: "You will not be able to recover Energy Sun.",
         type: "error",
         showCancelButton: true,
-        confirmButtonClass: "btn-danger",
+        confirmButtonClass: "btn-danger waves-effect",
         confirmButtonText: "Yes, delete it!",
         closeOnConfirm: false
     },
     function(){
         swal("Deleted!", "Energy Sun has been deleted.", "success");
     });
-});
+  });
+  $('.btnEdit').on('click',function() {
+    swal({
+        title: "Changes won't be undone.",
+        text: "Save changes?",
+        type: "info",
+        showCancelButton: true,
+        confirmButtonClass: "btn-primary waves-effect",
+        confirmButtonText: "Confirm",
+        closeOnConfirm: false
+    },
+    function(){
+        swal("Updated!", "Position has been updated.", "success");
+    });
+  });
 
 });

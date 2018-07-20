@@ -62,4 +62,22 @@ $(document).ready(function(){
   $('.modalClose').on('click',function() {
     $('#addTeam').modal('hide');
   });
+  $('.btnAddTeam').on('click',function() {
+    $('#addTeam').modal('hide');
+    toastr.success('Team Name has been added.', 'Add Successful!',{ closeButton: true });
+  });
+  $('.delItem').on('click',function() {
+    swal({
+        title: "Are you sure?",
+        text: "You will not be able to recover this Team.",
+        type: "error",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false
+    },
+    function(){
+        swal("Deleted!", "Team has been deleted.", "success");
+    });
+});
 });

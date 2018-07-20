@@ -1,9 +1,6 @@
 html,body{
     font-family: 'Montserrat', sans-serif;
 }
-.custSize{
-    font-size: 20px;
-}
 .smCat{
     font-size: 15px;
 }
@@ -17,12 +14,26 @@ input[type=date]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+.toast {
+  opacity: 1 !important;
+}
 .miniIcon{
-    font-size:15px;
+  font-size:15px;
 }
 #footerLogo{
     height:100px; 
     width:auto;
     position: relative;
     right:5px;
+}
+/* Important part */
+.modal-dialog{
+  overflow-y: initial !important;
+}
+.modalBody{
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.modal {
+  max-width: 100%;
 }

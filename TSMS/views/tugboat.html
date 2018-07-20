@@ -5,18 +5,17 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
   <title>TSMS &mdash; Admin</title>
 
+  <link rel="stylesheet" href="../dist/modules/toastr/build/toastr.css">
   <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="../dist/modules/sweetalerts/sweetalert.css">
   <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="../dist/modules/smartwizard/css/smart_wizard.min.css">
   <link rel="stylesheet" href="../dist/modules/smartwizard/css/smart_wizard_theme_arrows.min.css">
-
-  <link rel="stylesheet" href="../dist/modules/summernote/summernote-lite.css">
-  <link rel="stylesheet" href="../dist/modules/flag-icon-css/css/flag-icon.min.css">
   <link rel="stylesheet" href="../dist/modules/datatables/datatables.min.css">
   <link rel="stylesheet" href="../dist/css/demo.css">
   <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="../dist/modules/waves/waves.css">
   <link rel="stylesheet" href="../dist/css/font.css">
   <link rel="stylesheet" href="../dist/css/animate.min.css">
   <link rel="stylesheet" href="../dist/css/cssAll.css">
@@ -92,10 +91,10 @@
             <i class="ion ion-android-person d-lg-none"></i>
             <div class="d-sm-none d-lg-inline-block">Hi, John Carlos Pagaduan</div></a>
             <div class="dropdown-menu dropdown-menu-right">
-              <a href="profile.html" class="dropdown-item has-icon">
+              <a href="profile.html" class="dropdown-item has-icon waves-effect">
                 <i class="ion ion-android-person"></i> Profile
               </a>
-              <a href="#" class="dropdown-item has-icon">
+              <a href="#" class="dropdown-item has-icon waves-effect">
                 <i class="ion ion-log-out"></i> Logout
               </a>
             </div>
@@ -121,11 +120,40 @@
           <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li>
-              <a href="admin-dashboard.html"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
+              <a class="waves-effect" href="admin-dashboard.html"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Main Navigation</li>
             <li class="active">
-              <a href="#" class="has-dropdown"><i class="fas fa-cog"></i><span>Maintenance</span></a>
+              <a href="#" class="has-dropdown waves-effect"><i class="fas fa-cog"></i><span>Maintenance</span></a>
+              <ul class="menu-dropdown">
+                <li><a class="waves-effect" href="general.html"><i class="fas fa-life-ring"></i>Berth</a></li>
+                <li><a class="waves-effect" href="components.html"><i class="ion ion-ios-paper"></i> Contracts</a></li>
+                <li><a class="waves-effect" href="buttons.html"><i class="ion ion-person"></i> Employee</a></li>
+                <li><a class="waves-effect" href="toastr.html"><i class="fas fa-anchor"></i> Equipment</a></li>
+                <li><a class="waves-effect" href="general.html"><i class="fas fa-life-ring"></i> Pier</a></li>
+                <li><a class="waves-effect" href="position.html"><i class="fas fa-sitemap"></i>Position</a></li>
+                <li class="waves-effect active"><a href="tugboat.html"><i class="ion ion-android-boat"></i> Tugboat</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="has-dropdown waves-effect"><i class="fas fa-tasks"></i><span>Transactions</span></a>
+              <ul class="menu-dropdown">
+                <li><a href="#" class="has-dropdown waves-effect"><i class="ion ion-android-people"></i>Consignee</a>
+                  <ul class="menu-dropdown">
+                    <li><a class="waves-effect" href="#"><i class="ion ion-ios-paper"></i>Contracts</a></li>
+                    <li><a class="waves-effect" href="#"><i class="ion ion-document-text"></i>Requests</a></li>
+                  </ul>
+                </li>
+                <li><a class="waves-effect" href="general.html"><i class="fas fa-ticket-alt"></i>Dispatch Ticket</a></li>
+                <li><a class="waves-effect" href="team-builder.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
+                <li><a class="waves-effect" href="buttons.html"><i class="ion ion-ios-list"></i>Invoice</a></li>
+                <li><a class="waves-effect" href="toastr.html"><i class="ion ion-clipboard"></i>Job Order</a></li>
+                <li><a class="waves-effect" href="buttons.html"><i class="ion ion-cash"></i>Payment &amp; Billing</a></li>
+                <li><a class="waves-effect" href="toastr.html"><i class="fas fa-calendar-alt"></i>Schedule</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="has-dropdown waves-effect"><i class="ion ion-stats-bars"></i><span>Reports</span></a>
               <ul class="menu-dropdown">
                 <li><a href="general.html"><i class="fas fa-life-ring"></i>Berth</a></li>
                 <li><a href="components.html"><i class="ion ion-ios-paper"></i> Contracts</a></li>
@@ -133,51 +161,22 @@
                 <li><a href="toastr.html"><i class="fas fa-anchor"></i> Equipment</a></li>
                 <li><a href="general.html"><i class="fas fa-life-ring"></i> Pier</a></li>
                 <li><a href="position.html"><i class="fas fa-sitemap"></i>Position</a></li>
-                <li class="active"><a href="tugboat.html"><i class="ion ion-android-boat"></i> Tugboat</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="has-dropdown"><i class="fas fa-tasks"></i><span>Transactions</span></a>
-              <ul class="menu-dropdown">
-                <li><a href="#" class="has-dropdown"><i class="ion ion-android-people"></i>Consignee</a>
-                  <ul class="menu-dropdown">
-                    <li><a href="#"><i class="ion ion-ios-paper"></i>Contracts</a></li>
-                    <li><a href="#"><i class="ion ion-document-text"></i>Requests</a></li>
-                  </ul>
-                </li>
-                <li><a href="general.html"><i class="fas fa-ticket-alt"></i>Dispatch Ticket</a></li>
-                <li><a href="components.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
-                <li><a href="buttons.html"><i class="ion ion-ios-list"></i>Invoice</a></li>
-                <li><a href="toastr.html"><i class="ion ion-clipboard"></i>Job Order</a></li>
-                <li><a href="buttons.html"><i class="ion ion-cash"></i>Payment &amp; Billing</a></li>
-                <li><a href="toastr.html"><i class="fas fa-calendar-alt"></i>Schedule</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="has-dropdown"><i class="ion ion-stats-bars"></i><span>Reports</span></a>
-              <ul class="menu-dropdown">
-                <li><a href="general.html"><i class="fas fa-life-ring"></i>Berth</a></li>
-                <li><a href="components.html"><i class="ion ion-ios-paper"></i> Contracts</a></li>
-                <li><a href="buttons.html"><i class="ion ion-person"></i> Employee</a></li>
-                <li><a href="toastr.html"><i class="fas fa-anchor"></i> Equipment</a></li>
-                <li><a href="general.html"><i class="fas fa-life-ring"></i> Pier</a></li>
-                <li><a href="components.html"><i class="fas fa-sitemap"></i>Position</a></li>
                 <li><a href="toastr.html"><i class="ion ion-android-boat"></i> Tugboat</a></li>
               </ul>
             </li>
             <li>
-              <a href="#" class="has-dropdown"><i class="fas fa-wrench"></i><span>Utilities</span></a>
+              <a href="#" class="has-dropdown waves-effect"><i class="fas fa-wrench"></i><span>Utilities</span></a>
               <ul class="menu-dropdown">
-                <li><a href="contract.html"><i class="ion ion-ios-paper"></i> Contracts</a></li>
+                <li><a class="waves-effect" href="contract.html"><i class="ion ion-ios-paper"></i> Contracts</a></li>
               </ul>
             </li>
             <li class="menu-header">OTHERS(will be removed)</li>
             <li>
               <a href="#" class="has-dropdown"><i class="ion ion-flag"></i><span>Icons</span></a>
               <ul class="menu-dropdown">
-                <li><a href="ion-icons.html"><i class="ion ion-ios-circle-outline"></i> Ion Icons</a></li>
-                <li><a href="fontawesome.html"><i class="ion ion-ios-circle-outline"></i> Font Awesome</a></li>
-                <li><a href="flag.html"><i class="ion ion-ios-circle-outline"></i> Flag</a></li>
+                <li><a class="waves-effect" href="ion-icons.html"><i class="ion ion-ios-circle-outline"></i> Ion Icons</a></li>
+                <li><a class="waves-effect" href="fontawesome.html"><i class="ion ion-ios-circle-outline"></i> Font Awesome</a></li>
+                <li><a class="waves-effect" href="flag.html"><i class="ion ion-ios-circle-outline"></i> Flag</a></li>
               </ul>
             </li>
             <li>
@@ -236,7 +235,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="infoModalLabel"><i class="fas fa-ship"></i>&nbsp;Energy Sun</h5>
-              <button type="button" class="close modalClose" ></button>
+              <button type="button" class="close modalClose waves-effect" ></button>
                 <span aria-hidden="true"><i class="ion-close-round"></i></span>
               </button>
             </div>
@@ -430,7 +429,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button class="editItem btn btn-primary" role="button">Edit Information</button>
+              <button class="editItem btn btn-primary waves-effect" role="button">Edit Information</button>
             </div>
           </div>
         </div>
@@ -441,7 +440,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="viewSummaryLabel"><i class="fas fa-ship"></i>    Energy Sun</h5>
-              <button type="button" class="close modalClose"></button>
+              <button type="button" class="close modalClose waves-effect"></button>
                 <span aria-hidden="true"><i class="ion-close-round"></i></span>
               </button>
             </div>
@@ -635,7 +634,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-              <button class="btnAdd btn btn-primary" role="button">Add</button>
+              <button class="btnAdd btn btn-primary waves-effect" role="button">Add</button>
             </div>
           </div>
         </div>
@@ -655,10 +654,10 @@
             <div class="col-lg-3 col-md-6 col-12">
               <form class="selectViews">
                 <div class="btn-group btn-group-toggle" role="group" aria-label="Button group with nested dropdown">
-                    <button type="button" class="detView btn btn-secondary" data-toggle="tooltip" title="Detailed View"><i class="fas fa-align-left"></i></button>
-                    <button type="button" class="cardView btn btn-secondary active" data-toggle="tooltip" title="Card View"><i class="fas fa-credit-card"></i></button>
+                    <button type="button" class="detView btn btn-secondary waves-effect" data-toggle="tooltip" title="Detailed View"><i class="fas fa-align-left"></i></button>
+                    <button type="button" class="cardView btn btn-secondary active waves-effect" data-toggle="tooltip" title="Card View"><i class="fas fa-credit-card"></i></button>
                   <div class="sortSelect btn-group" role="group">
-                    <button class="sortDdown btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="sortDdown btn btn-primary dropdown-toggle waves-effect" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Sort
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -674,9 +673,9 @@
           <div class="cardLayout">
             <div class="row mt-3">
               <div class="col-12 col-sm-6 col-lg-3 mr-2">
-                <a href="#" class="addCard card text-center border-dark bounceIn animated" data-toggle="tooltip" title="Add">
+                <a href="#" class="addCard card text-center border-dark bounceIn animated " data-toggle="tooltip" title="Add">
                   <div class="card-body">
-                    <i class="addCardIcon ion-plus-circled"></i>
+                    <i class="addCardIcon ion-plus-circled "></i>
                   </div>
                 </a>
               </div>
@@ -686,17 +685,17 @@
                   <div class="card-body">
                     <h5 class="cTitle card-title">Energy Sun</h5>
                     <span data-toggle="modal" data-target="#infoModal">
-                      <button type="button" class="btn btn-primary nCustom" data-toggle="tooltip" title="View Information">
-                        <i class="fas fa-info custSize"></i>
+                      <button type="button" class="btn btn-primary nCustom waves-effect" data-toggle="tooltip" title="View Information">
+                        <i class="fas fa-info" style="font-size: 20px;"></i>
                       </button>
                     </span>
                     <br>
                     <div class="mr-1">
-                      <button class="editItem btn btn-secondary" data-toggle="tooltip" title="Edit" role="button">
-                        <i class="fas fa-edit iconcenter custSize"></i>
+                      <button class="editItem btn btn-secondary waves-effect" data-toggle="tooltip" title="Edit" role="button">
+                        <i class="ion ion-edit"></i>
                       </button>
-                      <button class="delItem btn btn-danger" data-toggle="tooltip" title="Delete">
-                        <i class="fas fa-trash custSize"></i>
+                      <button class="delItem btn btn-danger waves-effect" data-toggle="tooltip" title="Delete">
+                        <i class="fas fa-trash"></i>
                       </button>
                     </div>  
                   </div>
@@ -708,7 +707,7 @@
         <!-- Detailed Layout -->
         <div class="detLayout" class="mt-3"><br>
           <div class="exportButtons float-right"></div>
-          <button class="detAdd btn btn-primary text-center border-dark bounceIn animated">
+          <button class="detAdd btn btn-primary text-center border-dark bounceIn animated waves-effect">
               Add
             </button><br><br>
             <table class="detailedTable text-center table table-striped fadeIn animated" style="width:100%">
@@ -733,11 +732,11 @@
                         <td>05/04/2021</td>
                         <td>
                           <div class="ml-1 mr-1">
-                            <button class="editItem btn btn-sm btn-secondary optCustom" data-toggle="tooltip" title="Edit" role="button">
-                              <i class="miniIcon fas fa-edit custSize"></i>
+                            <button class="editItem btn btn-sm btn-secondary optCustom waves-effect" data-toggle="tooltip" title="Edit" role="button">
+                              <i class="miniIcon ion ion-edit"></i>
                             </button>
-                            <button class="delItem btn btn-sm btn-danger optCustom" data-toggle="tooltip" title="Delete">
-                              <i class="miniIcon fas fa-trash custSize"></i>
+                            <button class="delItem btn btn-sm btn-danger optCustom waves-effect" data-toggle="tooltip" title="Delete">
+                              <i class="miniIcon fas fa-trash"></i>
                             </button>
                           </div>  
                         </td>
@@ -751,10 +750,10 @@
           <div class="card animated bounceInLeft" >
               <div class="card-header">
                 <span>
-                  <a href="" class="btnBack btn btn-lg btn-link float-left mt-1" data-toggle="tooltip"  title="Back" role="button">
-                    <i class="ion-chevron-left custSize"></i>
+                  <a href="" class="btnBack btn btn-lg btn-link float-left mt-2" data-toggle="tooltip"  title="Back" role="button">
+                    <i class="ion-chevron-left"></i>
                   </a>
-                  <h3 class="text-center">ADD</h3>
+                  <h3 class="text-center mr-5 mt-2">ADD</h3>
                 </span>
               </div>
               <div class="card-body">
@@ -1091,7 +1090,7 @@
                           <div class="form-group">
                             <label for="AddInsurance1">Insurance # 1<sup class="text-primary">&#10033;</sup></label>
                             <input type="text" class="form-control" id="AddInsurance1" name="AddInsurance1" placeholder="Tugboat Insurance # 1">
-                            <button type="button" id="btnAddInsuranceAdd" class="btn btn-primary float-right mt-2 btn-lg" data-toggle="tooltip" title="Add field for another Insurance"><i class="fas fa-plus"></i></button>
+                            <button type="button" id="btnAddInsuranceAdd" class="btn btn-primary float-right mt-2 btn-lg waves-effect" data-toggle="tooltip" title="Add field for another Insurance"><i class="fas fa-plus"></i></button>
                           </div>
                         </div>
                       </div>
@@ -1121,11 +1120,10 @@
           <div class="card animated bounceInLeft" >
               <div class="card-header">
                 <spanstyle = "height:50px;">
-                  <a href="tugboat.html" class="btnBack btn btn-lg btn-link float-left mt-1" data-toggle="tooltip"  title="Back" role="button">
-                    <i class="ion-chevron-left custSize"></i>
+                  <a href="tugboat.html" class="btnBack btn btn-lg btn-link float-left mt-2" data-toggle="tooltip"  title="Back" role="button">
+                    <i class="ion-chevron-left"></i>
                   </a>
-                  <button class="btn btn-lg btn-link float-right"></button>
-                  <h3 class="text-center">EDIT</h3>
+                  <h3 class="text-center mr-5 mt-2">EDIT</h3>
                 </span>
               </div>
               <div class="card-body">
@@ -1184,7 +1182,7 @@
                               </div>
                             </div>
                           </div><br>
-                          <button id="btnEItemPics" type="submit" class="btn btn-primary float-right font-weight-bold">Submit</button><br>
+                          <button id="btnEItemPics" type="submit" class="btn btn-primary float-right font-weight-bold waves-effect">Save Changes</button><br>
                         </form>
                       </div>
                       <!-- Main Info Tab -->
@@ -1333,7 +1331,7 @@
                               </div>
                             </div>
                           </div>
-                          <button id="btnEmInfoSubmit" type="submit" class="btn btn-primary float-right font-weight-bold">Submit</button>
+                          <button id="btnEmInfoSubmit" type="submit" class="btn btn-primary float-right font-weight-bold waves-effect">Save Changes</button>
                         </form>
                       </div>
                       <!-- Tug Spec Tab -->
@@ -1410,7 +1408,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <button type="submit" id="btnETSpecSubmit" class=" btn btn-primary float-right font-weight-bold">Submit</button>
+                              <button type="submit" id="btnETSpecSubmit" class=" btn btn-primary float-right font-weight-bold waves-effect">Save Changes</button>
                             </form>
                       </div>
                       <!-- Tug Class Tab -->
@@ -1504,7 +1502,7 @@
                                     <div class="form-group">
                                       <label for="editInsurance1">Insurance # 1<sup class="text-primary">&#10033;</sup></label>
                                       <input type="text" class="form-control" id="editInsurance1" name="editInsurance1" placeholder="Tugboat Insurance # 1">
-                                      <button type="button" id="btnEditInsuranceAdd" class="btn btn-primary float-right mt-2 btn-lg" data-toggle="tooltip" title="Add field for another Insurance"><i class="fas fa-plus"></i></button>
+                                      <button type="button" id="btnEditInsuranceAdd" class="btn btn-primary float-right mt-2 btn-lg waves-effect" data-toggle="tooltip" title="Add field for another Insurance"><i class="fas fa-plus"></i></button>
                                     </div>
                                   </div>
                                 </div>
@@ -1523,7 +1521,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <button type="submit" id="btnETClassSubmit" class="btn btn-primary float-right font-weight-bold">Submit</button>
+                              <button type="submit" id="btnETClassSubmit waves-effect" class="btn btn-primary float-right font-weight-bold">Save Changes</button>
                             </form>
                       </div>
                     </div>
@@ -1546,7 +1544,9 @@
   <script src="../dist/modules/smartwizard/js/jquery.smartWizard.min.js"></script>
   <script src="../dist/js/withCard.js"></script>
   <script src="../dist/modules/sweetalerts/sweetalert.min.js"></script>
+  <script src="../dist/modules/toastr/build/toastr.min.js"></script>
   <script src="../dist/modules/countrypicker/niceCountryInput.js"></script>
+  <script src="../dist/modules/waves/waves.js"></script>
   <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
   <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
   <script src="../dist/js/scripts.js"></script>
