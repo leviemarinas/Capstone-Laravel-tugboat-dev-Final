@@ -15,6 +15,9 @@
   background-color: #39065A !important;
   color: #fff;
 }
+.demo-settings .demo-settings-toggle {
+  background-color:#574B90 !important;
+}
 .note-tooltip-content{
   background-color:#574B90 !important;
 }

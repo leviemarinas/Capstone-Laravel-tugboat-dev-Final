@@ -1,232 +1,232 @@
+.demo-settings .demo-settings-toggle {
+  background-color:#800000!important;
+}
 .niceCountryInputMenuDropdownContent a:hover {
-	background-color: #39065A !important;
+  background-color: #924444 !important;
 }
 .note-tooltip-content{
-  background-color:#39065A!important;
+  background-color:#924444!important;
 }
 .note-tooltip.bottom .note-tooltip-arrow{
-  border-bottom-color:#39065A!important;
+  border-bottom-color:#924444!important;
 }
-.demo-settings .demo-settings-toggle {
-  background-color:#39065A!important;
-}  
 .sw-theme-arrows>ul.step-anchor>li.active>a{
-  border-color:rgb(32, 28, 56)!important;
+  border-color:#924444!important;
   color:#fff
   !important;
-  background:rgb(32, 28, 56)!important;
+  background:#924444!important;
   }
 .sw-theme-arrows>ul.step-anchor>li.active>a:after{
-  border-left:30px solid rgb(32, 28, 56)!important;
+  border-left:30px solid #924444!important;
   }
 .sw-theme-arrows::before{
   border:10px solid #f3f3f3;
-  border-top:10px solid rgb(32, 28, 56);
+  border-top:10px solid #924444;
 }
 .sw-theme-arrows>ul.step-anchor>li.done>a{
-  border-color:#39065A!important;
+  border-color:#800000!important;
   color:#fff!important;
-  background:#39065A!important;
+  background:#800000!important;
   }
 .sw-theme-arrows>ul.step-anchor>li.done>a:after{
-  border-left:30px solid #39065A;
+  border-left:30px solid #800000;
   }
 #teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
-  background-color: rgb(32, 28, 56) !important;
+  background-color: #924444 !important;
   color: #fff;
 }
 .bg-primary {
-	background-color: #39065A !important;
+  background-color: #800000 !important;
 }
 .text-primary {
-	color: #39065A !important;
+  color: #800000 !important;
 }
 a {
-	color: #39065A;
+  color: #800000;
 }
 a:hover {
-	color: rgb(32, 28, 56);
+  color: #800000;
 }
 .btn-primary {
-	background-color: #39065A;
-	border-color: transparent !important;
+  background-color: #800000;
+  border-color: transparent !important;
 }
 .btn-primary:focus,
 .btn-primary:focus:active,
 .btn-primary:active,
 .btn-primary:hover {
-	background-color: rgb(32, 28, 56) !important;
+  background-color: #924444 !important;
 }
 .btn-primary.disabled, .btn-primary:disabled {
-  background-color: #39065A;
-  border-color: #39065A;
+  background-color: #800000;
+  border-color: #800000;
 }
 .btn-outline-primary {
-  color: #39065A;
+  color: #800000;
   background-color: transparent;
   background-image: none;
-  border-color: #39065A;
+  border-color: #800000;
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #39065A;
-  border-color: #39065A;
+  background-color: #800000;
+  border-color: #800000;
 }
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #39065A;
+  color: #800000;
   background-color: transparent;
 }
 .btn-outline-primary:not([disabled]):not(.disabled):active, .btn-outline-primary:not([disabled]):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #39065A;
-  border-color: #39065A;
+  background-color: #800000;
+  border-color: #800000;
 }
 .btn-link {
   font-weight: 400;
-  color: #39065A;
+  color: #800000;
   background-color: transparent;
 }
 .btn-link:hover {
-  color: rgb(32, 28, 56);
+  color: #924444;
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
-  background-color: #39065A;
+  background-color: #800000;
 }
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  background-color: #39065A;
+  background-color: #800000;
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #39065A;
+  background-color: #800000;
 }
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  background-color: #39065A;
+  background-color: #800000;
 }
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #39065A;
+  background-color: #800000;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #39065A;
+  background-color: #800000;
 }
 .page-link {
-  color: #39065A;
+  color: #800000;
   background-color: #fff;
   border: 1px solid #ededed;
 }
 .page-item.active .page-link {
   color: #fff;
-  background-color: #39065A;
-  border-color: #39065A;
+  background-color: #800000;
+  border-color: #800000;
 }
 .page-link:focus, .page-link:hover {
-  color: rgb(32, 28, 56);
+  color: #924444;
 }
 
 .badge-primary {
   color: #fff;
-  background-color: #39065A;
+  background-color: #800000;
 }
 .progress-bar {
   color: #fff;
-  background-color: #39065A;
+  background-color: #800000;
 }
 .list-group-item.active {
   color: #fff;
-  background-color: #39065A;
-  border-color: #39065A;
+  background-color: #800000;
+  border-color: #800000;
 }
 .bg-primary {
-  background-color: #39065A !important;
+  background-color: #800000 !important;
 }
 .border-primary {
-  border-color: #39065A !important;
+  border-color: #800000 !important;
 }
 .text-primary {
-  color: #39065A !important;
+  color: #800000 !important;
 }
 
 .navbar.active {
-	background-color: #39065A;
+  background-color: #800000;
 }
 .navbar-bg {
-	background-color: #39065A;
+  background-color: #800000;
 }
 .form-control:focus {
-	border-color: #39065A;
+  border-color: #800000;
 }
 .main-sidebar .sidebar-menu li.active a {
-	background-color: #f9f9f9;
-	color: #39065A;
+  background-color: #f9f9f9;
+  color: #800000;
 }
 .main-sidebar .sidebar-menu li ul.menu-dropdown li a:hover {
-	color: #39065A;
+  color: #800000;
 }
 
 .main-sidebar .sidebar-menu li ul.menu-dropdown li.active a {
-	color: #39065A;
+  color: #800000;
 }
 .alert.alert-primary {
-	background-color: #39065A;
+  background-color: #800000;
 }
 .card.card-primary {
-	border-top: 2px solid #39065A;
+  border-top: 2px solid #800000;
 }
 .fc button.fc-state-active {
-	background-color: #39065A;
-	color: #fff;
+  background-color: #800000;
+  color: #fff;
 }
 .jqvmap-circle {
-	background-color: #39065A;
-	border: 1px solid #000;
+  background-color: #800000;
+  border: 1px solid #000;
 }
 .weather ul li {
-	border: 2px solid #39065A;
-	color: #39065A;
+  border: 2px solid #800000;
+  color: #800000;
 }
 .card-chat .chat-content .chat-item.chat-right .chat-details .chat-text {
-	background-color: #39065A;
-	color: #fff;
+  background-color: #800000;
+  color: #fff;
 }
 .nav-tabs .nav-item .nav-link {
-	color: #39065A;
+  color: #800000;
 }
 .nav-pills .nav-item .nav-link {
-	color: #39065A;
+  color: #800000;
 }
 .swal-button.swal-button--confirm {
-	background-color: #39065A;
+  background-color: #800000;
 }
 .page-item .page-link {
-	color: #39065A;
+  color: #800000;
 }
 .page-item.active .page-link {
-	background-color: #39065A;
-	border-color: #39065A;
+  background-color: #800000;
+  border-color: #800000;
 }
 .btn-group .btn.active {
-	background-color: #39065A;
-	color: #fff;
+  background-color: #800000;
+  color: #fff;
 }
 .media .media-right {
-	color: #39065A;
+  color: #800000;
 }
 .selectric-items li.selected,
 .selectric-items li.highlighted {
-	background-color: #39065A;
-	color: #fff;
+  background-color: #800000;
+  color: #fff;
 }
 .dropzone {
-	border: 2px dashed #39065A;
+  border: 2px dashed #800000;
 }
 .accordion .accordion-header[aria-expanded="true"] {
-	background-color: #39065A;
-	color: #fff;
+  background-color: #800000;
+  color: #fff;
 }
 .bootstrap-tagsinput .tag {
-	background-color: #39065A;
+  background-color: #800000;
 }

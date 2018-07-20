@@ -7,17 +7,6 @@
 .addLayout{
   display:none;
 }
-/* Important part */
-.modal-dialog{
-  overflow-y: initial !important
-}
-.modalBody{
-  height: 450px;
-  overflow-y: auto;
-}
-.modal {
-  max-width: 100%;
-}
 #editSecPic, #editFirstPic, #editThirdPic,#AddsecPic, #AddfirstPic, #AddthirdPic{
   cursor:pointer;
 }

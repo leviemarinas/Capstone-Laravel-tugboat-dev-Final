@@ -27,7 +27,7 @@ $(document).ready(function(){
           extend: 'copy',
           text: '&mdash; Copy &mdash;',
           title: dtTitle,
-          className: 'btn btn-primary',
+          className: 'btn btn-primary waves-effect',
           exportOptions: {
           columns: 'th:not(:last-child)',
           }
@@ -36,7 +36,7 @@ $(document).ready(function(){
           extend: 'print',
           text: '&mdash; Print &mdash;',
           title: dtTitle,
-          className: 'btn btn-primary',
+          className: 'btn btn-primary waves-effect',
           exportOptions: {
           columns: 'th:not(:last-child)'
           }
@@ -45,7 +45,7 @@ $(document).ready(function(){
           extend: 'pdf',
           text: '&mdash; PDF &mdash;',
           title: dtTitle,
-          className: 'btn btn-primary',
+          className: 'btn btn-primary waves-effect',
           exportOptions: {
           columns: 'th:not(:last-child)'
           }
@@ -66,7 +66,22 @@ $(document).ready(function(){
 });
 
   table.buttons().container().appendTo('.exportButtons');
-
+  $('.toast-close-button').css('color','black');
+  toastr.options = {
+    "closeButton": true,
+    "positionClass": "toast-top-center",
+    "showDuration": "5000",
+    "hideDuration": "1000",
+    "timeOut": "2000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+  $('.buttons-pdf').on('click',function() {
+    toastr.success('PDF Downloaded!');
+  });
 // Carousel Change Image Speed
 $(function(){
     $('.carousel').carousel({
@@ -78,6 +93,9 @@ $(function(){
   // Step show event
   $(".smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
     //alert("You are on step "+stepNumber+" now");
+    
+    $(".sw-btn-next").addClass('waves-effect');
+    $(".sw-btn-prev").addClass('waves-effect');
     if(stepPosition === 'first'){
         $("#prev-btn").addClass('disabled');
     }else if(stepPosition === 'final'){
@@ -94,7 +112,7 @@ $(function(){
   });
 
   // Toolbar extra buttons
-  var btnViewSummary = $('<button class="btn btn-primary" >View Summary</button>')
+  var btnViewSummary = $('<button class="btn btn-primary waves-effect" >View Summary</button>')
     .on('click',function(){
       $('#viewSummaryModal').modal('show');
       });
@@ -122,7 +140,7 @@ $(function(){
             title: "Only 3 Additional Insurance Fields are allowed",
             type: "info",
             showCancelButton: false,
-            confirmButtonClass: "btn-primary",
+            confirmButtonClass: "btn-primary waves-effect",
             confirmButtonText: "Ok",
             closeOnConfirm: false
         });
@@ -150,7 +168,7 @@ $(function(){
               title: "Only 3 Additional Insurance Fields are allowed",
               type: "info",
               showCancelButton: false,
-              confirmButtonClass: "btn-primary",
+              confirmButtonClass: "btn-primary waves-effect",
               confirmButtonText: "Ok",
               closeOnConfirm: false
           });
@@ -265,7 +283,7 @@ $('.btnBack').on('click',function(s) {
       text: "Are you sure you want to go back?",
       type: "error",
       showCancelButton: true,
-      confirmButtonClass: "btn-danger",
+      confirmButtonClass: "btn-danger waves-effect",
       confirmButtonText: "Ok",
       closeOnConfirm: false
   },
@@ -361,7 +379,7 @@ $('.btnAdd').on('click',function() {
           text: "You will not be able to recover Energy Sun.",
           type: "error",
           showCancelButton: true,
-          confirmButtonClass: "btn-danger",
+          confirmButtonClass: "btn-danger waves-effect",
           confirmButtonText: "Yes, delete it!",
           closeOnConfirm: false
       },
@@ -455,7 +473,7 @@ if (oInput.type == "file") {
           text:"Sorry, " + sFileName + " is invalid. \n Allowed extensions are: " + _validFileExtensions.join(", "),
           type: "error",
           showCancelButton: false,
-          confirmButtonClass: "btn-danger",
+          confirmButtonClass: "btn-danger waves-effect",
           confirmButtonText: "Ok",
           closeOnConfirm: false
         });

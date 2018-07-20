@@ -1,6 +1,9 @@
 #teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
 	background-color: #319992 !important;
   color: #fff;
+}
+.demo-settings .demo-settings-toggle {
+  background-color: #319992 !important;
 }  
 .note-tooltip-content{
   background-color:#3DC7BE !important;
