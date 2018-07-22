@@ -1,10 +1,65 @@
 
 # Capstone-Tugboat-Laravel-dev
 
+### Development `Phase 1` update `7`
+
+### July 21, 2018
+
+`additions`
+##### files
+- [x] dist/css/skins/maroon.css
+
+##### folders
+dist/modules/waves
+- [x] waves.css
+- [x] waves.js
+
+`fixes`
+##### position.html
+    - [x] add and edit views are now in modal
+##### toaster added to :
+    - [x] team-builder.html
+    - [x] contract.html
+
+`deletions`
+
+### Development `Phase 1` update `6`
+
+`additions`
+##### files
+- [x] contract.js
+- [x] contract.html
+- [x] noCard.js
+- [x] withCard.js
+
+##### folders
+- [x] `new` dist/modules/sweetalerts
+        - [x] sweetalert.css
+        - [x] sweetalert.min.js
+    - `new` dist/modules/smartwizard
+        - `new` dist/modules/smartwizard/css
+            - [x] smart_wizard_theme_arrows.min.css
+            - [x] smart_wizard.min.css
+        - `new` dist/modules/smartwizard/js
+            - [x] jquery.smartWizard.min.css
+`fixes`
+- tugboat.html & position.html
+    - [x] fixed the file destination of sweetalerts 
+    - [x] fixed the assets
+    - [x] linked the new js files
+
+`deletions`
+- from dist/js
+    - [x] sweetalert.min.js
+    - [x] add.js
+    - [x] custom.js
+    - [x] edit.js
+- from dist/css
+    - [x] sweetalert.css
 
 ### Development `Phase 1` update `5`
 
-### July 2018
+### July 15, 2018
 
 `new`
 
