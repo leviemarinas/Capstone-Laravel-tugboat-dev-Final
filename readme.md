@@ -1,5 +1,36 @@
-
 # Capstone-Tugboat-Laravel-dev
+### Development `Phase 1` Update `8`
+
+`new`
+
+`additions`
+* `js/berth/berth.js` berth maintenance scripts
+* `js/employee/employee.js`employee maintenance scripts
+* `js/pier/pier.js` pier maintenance scripts
+* `js/position/position.js`position maintenance scripts
+* `js/user/user/user.js` user maintenance scripts
+
+#### these are for the additional maintenance usertype
+
+- [x] `new` UsertypeController
+- [x] `new` User.php
+
+* `newTemplates` for real This Time and Final 
+- [x] `new` newInlineScripts.blade.php
+- [x] `new` newNavbar.blade.php
+- [x] `new` newSidebar.blade.php
+- [x] `new` newTemplate.blade.php
+- [x] `new` newTemplateScripts.blade.php
+- [x] `new` newTemplateStyle.blade.php
+
+##### this views are the master template for the whole application, if the views gets fucked somewhere here is maybe the problem.
+
+`deletions`
+* this base template had too many bugs `masterTemplate.blade.php` it's time for you to go, you've served your purpose. `bye`
+
+`updates`
+- [x] The Maintenance is Finally Finished And Ready to be Tested.
+* contracts has been moved to the utilites
 
 ### Development `Phase 1` update `7`
 
