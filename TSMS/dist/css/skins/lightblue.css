@@ -2,6 +2,15 @@
 	background-color: #319992 !important;
   color: #fff;
 }
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color:#3DC7BE!important;
+}
+.btn-primary:not([disabled]):not(.disabled).active,
+.btn-primary:not([disabled]):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #319992;
+}
 .demo-settings .demo-settings-toggle {
   background-color: #319992 !important;
 }  

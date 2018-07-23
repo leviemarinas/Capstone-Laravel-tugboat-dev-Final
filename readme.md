@@ -1,7 +1,31 @@
 
 # Capstone-Tugboat-Laravel-dev
 
-### July 21, 2018 12:14 Am
+### July 24, 2018 02:06 AM
+- Added files
+    - dist/modules/jquery-ui.min.js
+- Added folder
+    - dist/modules/fullcalendar
+        - fullcalendar.min.css
+        - fullcalendar.min.js
+    - dist/modules/moment
+        - moment.js
+    - dist/modules/nice-select
+        - jquery.nice-select.min.js
+        - nice-select.css
+- Altered files
+    - team-builder.css, team-builder.js, and team-builder.html changed to: 
+        - dist/css/dispatchHauling.css
+        - dist/js/dispatchHauling.js
+        - views/dispatchHauling.html
+-  Fixed Files
+    - tugboat.html
+        - changed tugboat type to <select> using nice-select plugin
+    - dispatchHauling.html
+        - added tugboat assignment view
+        - added create schedule view
+        
+### July 21, 2018 12:14 AM
 - Added files
     - dist/css/skins/maroon.css
 - Added folder
@@ -33,59 +57,69 @@
             - sweetalert.css
             - sweetalert.min.js
     - `new` dist/modules/smartwizard
-            - `new` dist/modules/smartwizard/css
-                - smart_wizard_theme_arrows.min.css
-                - smart_wizard.min.css
-            - `new` dist/modules/smartwizard/js
-                - jquery.smartWizard.min.css
-- Removed Files
-    - from dist/js
-        - sweetalert.min.js
-        - add.js
-        - custom.js
-        - edit.js
-    - from dist/css
-        - sweetalert.css
+        - `new` dist/modules/smartwizard/css
+            - [x] smart_wizard_theme_arrows.min.css
+            - [x] smart_wizard.min.css
+        - `new` dist/modules/smartwizard/js
+            - [x] jquery.smartWizard.min.css
+`fixes`
+- tugboat.html & position.html
+    - [x] fixed the file destination of sweetalerts 
+    - [x] fixed the assets
+    - [x] linked the new js files
 
-- Fixed files
-    - tugboat.html & position.html
-        - fixed the file destination of sweetalerts 
-        - fixed the assets
-        - linked the new js files
-        
-- Added Files
-    - noCard.js
-    - withCard.js
+`deletions`
+- from dist/js
+    - [x] sweetalert.min.js
+    - [x] add.js
+    - [x] custom.js
+    - [x] edit.js
+- from dist/css
+    - [x] sweetalert.css
 
+### Development `Phase 1` update `5`
 
-### July 18, 2018 04:45 AM
+### July 15, 2018
 
-- Added Folder
-    - `new` dist/modules/countrypicker
-            - niceCountryInput.css
-            - niceCountryInput.js
+`new`
 
-- Fixed files
-    - tugboat.html
-        - fixed the countrypicker for both edit and add views
-    - /skins files 
-        - fixed the colors of wizard based on the skin selected
+* maintenance is almost complete!
+T
+`Go For IT!!`
+* the following `controllers` are back! for maintenance tables
 
-### July 18, 2018
-- Added files
-    - dist/css/teambuilder.css
-    - views/profile.html
-    - views/team-builder.html
+- [x] `restored` BerthController
+- [x] `restored` ContractsController
+- [x] `restored` EmployeesController
+- [x] `restored` EquipmentsController
+- [x] `restored` PierController
+- [x] `restored` PositionController
+- [x] `restored` TugboatController
 
-- Added Folders
-    - `new` dist/modules/bootstrap-datepicker
-    - `new` dist/modules/profile
-    - `new` dist/img/profile
-    - `new` dist/modules/interact
+`welcome!!`
 
-- Fixed files
-    - tugboat.html
-        - fixed the datepicker for both edit and add views
+* the following `models` has added for maintenance tables with proper `migrations`
+
+- [x] `restored` Berth
+- [x] `restored` Employees
+- [x] `restored` Equipments
+- [x] `restored` Pier
+- [x] `new` Position
+- [x] `new` Tugboat
+- [x] `new` TugboatClass
+- [x] `new` TugboatMainSpecifications
+- [x] `new` TugboatSpecifications
+
+`updated`
+
+* fixed foreign key relationship for
+
+- [x] Tugboat->TugboatClass 
+- [x] Tugboat->TugboatMainSpecifications
+- [x] Tugboat->TugboatSpecifications
+- [x] Employees->Position
+
+`hurray!`
 
 ### Development `Phase 1` update `4`
 ### July 6, 2018
@@ -148,14 +182,6 @@ The Following Controllers has been `deleted` for now, these controllers may caus
 * added `stisla admin` assets in the public folder 
 * `adminLTE`template is now `replaced`
 
-
-### May 28, 2018
-###### Added 3 INITIAL Views
-- Create - completed the necessary ui
-- Edit - not fully working
-- Index - no detailed view
-
-
 ### Development `Phase 1` update `1`
 
 ### May 19, 2018
@@ -214,4 +240,13 @@ The Following Controllers has been `deleted` for now, these controllers may caus
 - [x] WebpagesController
 
 added resources for controllers 
+
+
+### May 28, 2018
+###### Added 3 INITIAL Views
+- Create - completed the necessary ui
+- Edit - not fully working
+- Index - no detailed view
+
+
 

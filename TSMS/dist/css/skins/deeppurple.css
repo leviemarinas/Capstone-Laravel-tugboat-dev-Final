@@ -1,6 +1,15 @@
 .niceCountryInputMenuDropdownContent a:hover {
 	background-color: #39065A !important;
 }
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color:#39065A!important;
+}
+.btn-primary:not([disabled]):not(.disabled).active,
+.btn-primary:not([disabled]):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(32, 28, 56);
+}
 .note-tooltip-content{
   background-color:#39065A!important;
 }

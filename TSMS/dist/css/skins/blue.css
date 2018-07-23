@@ -1,6 +1,15 @@
 .demo-settings .demo-settings-toggle {
   background-color: #182794 !important;
 }
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color:#182794!important;
+}
+.btn-primary:not([disabled]):not(.disabled).active,
+.btn-primary:not([disabled]):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #182794;
+}
 .niceCountryInputMenuDropdownContent a:hover {
   background-color: #182794 !important;
 }

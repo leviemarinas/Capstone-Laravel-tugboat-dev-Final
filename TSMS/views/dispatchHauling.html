@@ -11,8 +11,10 @@
   <link rel="stylesheet" href="../dist/css/demo.css">
   <link rel="stylesheet" href="../dist/css/cssAll.css">
   <link rel="stylesheet" href="../dist/css/font.css">
-  <link rel="stylesheet" href="../dist/css/teambuilder.css">
+  <link rel="stylesheet" href="../dist/css/animate.min.css">
+  <link rel="stylesheet" href="../dist/css/dispatchHauling.css">
   <link rel="stylesheet" href="../dist/modules/sweetalerts/sweetalert.css">
+  <link rel="stylesheet" href="../dist/modules/fullcalendar/fullcalendar.min.css">
   <link rel="stylesheet" href="../dist/modules/waves/waves.css">
   <link rel="stylesheet" href="../dist/modules/toastr/build/toastr.css">
   <link rel="stylesheet" href="../dist/css/style.css">
@@ -138,7 +140,7 @@
                   </ul>
                 </li>
                 <li><a class="waves-effect" href="general.html"><i class="fas fa-ticket-alt"></i>Dispatch Ticket</a></li>
-                <li class="active"><a class="waves-effect" href="team-builder.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
+                <li class="active"><a class="waves-effect" href="dispatchHauling.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
                 <li><a class="waves-effect" href="buttons.html"><i class="ion ion-ios-list"></i>Invoice</a></li>
                 <li><a class="waves-effect" href="toastr.html"><i class="ion ion-clipboard"></i>Job Order</a></li>
                 <li><a class="waves-effect" href="buttons.html"><i class="ion ion-cash"></i>Payment &amp; Billing</a></li>
@@ -227,66 +229,249 @@
           <h1 class="section-header">
             <div>
               Dispatch &amp; Hauling
+              <button class="btn btn-primary waves-effect ml-3 mb-2 active btnTeamAssign font-weight-bold">Team Assignment</button>
+              <button class="btn btn-primary waves-effect ml-3 mb-2 btnCreateSched">Create Schedule</button>
+              <button class="btn btn-primary waves-effect ml-3 mb-2 btnTugboatAssign">Tugboat Assignment</button>
             </div>
           </h1>
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="card">
-                <section class="sectionDark">
-                  <div class="container">
-                    <h5 class="section-header text-center" style="text-transform: uppercase;">
-                      Team List 
-                      <button class="float-right btn-sm btn btn-primary waves-effect" data-toggle="modal" data-target="#addTeam"><i class="fas fa-plus"></i></button>
-                    </h5>
-                  </div>
-                  <div class="row">
-                    <div class="col mr-3 ml-3">
-                      <a href="#">
+          <!-- Team Assignment -->
+          <div class="teamAssignment animated fadeIn">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="card">
+                  <section class="sectionDark">
+                    <div class="container">
+                      <h5 class="section-header text-center" style="text-transform: uppercase;">
+                        Team List 
+                        <button class="float-right btn-sm btn btn-primary waves-effect" data-toggle="modal" data-target="#addTeam"><i class="fas fa-plus"></i></button>
+                      </h5>
+                    </div>
+                    <div class="row">
+                      <div class="col mr-3 ml-3">
+                        <a href="#">
+                        <div class="card">
+                          <div class="card-body">
+                            <h6 class="float-left mt-2">Team Energy Sun</h6>
+                            <button type="button" class="delItem btn btn-sm btn-danger waves-effect waves-circle float-right" data-toggle="tooltip" title="Delete">
+                              <i class="miniIcon fas fa-trash"></i>
+                            </button> 
+                            <button type="button" class="btn btn-sm btn-secondary waves-effect waves-circle float-right mr-2" data-toggle="tooltip" title="Edit">
+                                <i class="miniIcon ion ion-edit"></i>
+                            </button>
+                          </div>
+                        </div>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="card">
+                  <section class="sectionDark">
+                    <div class="container">
+                      <h5 class="section-header text-center" style="text-transform: uppercase;">
+                        Tugboats List  
+                      </h5>
+                    </div>
+                    <div class="container">
                       <div class="card">
-                        <div class="card-body">
-                          <h6 class="float-left mt-2">Team Energy Sun</h6>
-                          <button type="button" class="delItem btn btn-sm btn-danger waves-effect waves-circle float-right" data-toggle="tooltip" title="Delete">
-                            <i class="miniIcon fas fa-trash"></i>
-                          </button> 
-                          <button type="button" class="btn btn-sm btn-secondary waves-effect waves-circle float-right mr-2" data-toggle="tooltip" title="Edit">
-                              <i class="miniIcon ion ion-edit"></i>
-                          </button>
+                        <div class="card-header bg-success text-white">
+                          <div class="float-right">
+                            <a data-collapse="#availableTugboat" class="btn btn-icon"><i class="ion ion-minus"></i></a>
+                          </div>
+                          <h4 class="text-center ml-5">Available</h4>
+                        </div>
+                        <div class="collapse show" id="availableTugboat">
+                          <div class="card-body">
+                            <div class="card card-success">
+                              <div class="card-header text-center">
+                                <h4>Energy Sun</h4>
+                              </div>
+                              <div class="card-body text-white">
+                                <div class="card bg-success">
+                                  <div class="card-header" id="dismissTeam">
+                                    Team Energy Sun 
+                                    <div class="float-right">
+                                      <a data-dismiss="#dismissTeam" class="btn btn-icon"><i class="ion ion-close"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      </a>
+                      <div class="card">
+                        <div class="card-header bg-info text-white">
+                          <div class="float-right">
+                            <a data-collapse="#occupiedTugboat" class="btn btn-icon"><i class="ion ion-plus"></i></a>
+                          </div>
+                          <h4 class="text-center ml-5">Occupied</h4>
+                        </div>
+                        <div class="collapse hide" id="occupiedTugboat">
+                          <div class="card-body">
+                            <div class="card card-sm">
+                              <div class="card-body text-center">
+                                Energy Sun
+                              </div>
+                              <div class="card-cta">
+                                <a href="#">More Info <i class="ion ion-ios-arrow-right"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header bg-danger text-white">
+                          <div class="float-right">
+                            <a data-collapse="#underRepair" class="btn btn-icon"><i class="ion ion-plus"></i></a>
+                          </div>
+                          <h4 class="text-center ml-5">Under Repair</h4>
+                        </div>
+                        <div class="collapse hide" id="underRepair">
+                          <div class="card-body">
+                            <div class="card card-sm">
+                              <div class="card-body text-center">
+                                Energy Sun
+                              </div>
+                              <div class="card-cta">
+                                <a href="#">More Info <i class="ion ion-ios-arrow-right"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </section>
+                  </section>
+                </div>
               </div>
             </div>
-            <div class="col-lg-7">
-              <div class="card">
-                <section class="sectionDark">
-                  <div class="container">
-                    <h5 class="section-header text-center" style="text-transform: uppercase;">
-                      Tugboats List  
-                    </h5>
-                  </div>
-                  <div class="container">
-                    <div class="card">
-                      <div class="card-header bg-success text-white">
-                        <div class="float-right">
-                          <a data-collapse="#availableTugboat" class="btn btn-icon"><i class="ion ion-minus"></i></a>
+          </div>
+          <!-- Create Schedule -->
+          <div class="createSched animated fadeIn">
+            <section class="content">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card card-primary">
+                    <div class="card-header with-border">
+                      <h4 class="card-title text-center">Draggable Events</h4>
+                    </div>
+                    <div class="card-body">
+                      <!-- the events -->
+                      <div id="external-events">
+                        <div class="external-event bg-green">Lunch</div>
+                        <div class="external-event bg-yellow">Go home</div>
+                        <div class="external-event bg-aqua">Do homework</div>
+                        <div class="external-event bg-light-blue">Work on UI design</div>
+                        <div class="external-event bg-red">Sleep tight</div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="drop-remove">
+                          <label class="custom-control-label" for="drop-remove">Remove After Drop</label>
                         </div>
-                        <h4 class="text-center ml-5">Available</h4>
                       </div>
-                      <div class="collapse show" id="availableTugboat">
-                        <div class="card-body">
-                          <div class="card card-success">
-                            <div class="card-header text-center">
-                              <h4>Energy Sun</h4>
-                            </div>
-                            <div class="card-body text-white">
-                              <div class="card bg-success">
-                                <div class="card-header" id="dismissTeam">
-                                  Team Energy Sun 
-                                  <div class="float-right">
-                                    <a data-dismiss="#dismissTeam" class="btn btn-icon"><i class="ion ion-close"></i></a>
+                    </div>
+                  </div>
+                  <div class="card card-primary">
+                    <div class="card-header with-border">
+                      <h4 class="card-title text-center">Create Event</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
+                        <!--<button type="button" id="color-chooser-btn" class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown">Color <span class="caret"></span></button>-->
+                        <ul class="fc-color-picker" id="color-chooser">
+                          <li><a class="text-aqua" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-blue" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-light-blue" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-teal" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-yellow" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-orange" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-green" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-lime" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-red" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-purple" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-fuchsia" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-muted" href="#"><i class="fa fa-square"></i></a></li>
+                          <li><a class="text-navy" href="#"><i class="fa fa-square"></i></a></li>
+                        </ul>
+                      </div>
+                      <!-- /btn-group -->
+                      <div class="input-group mb-3">
+                        <input id="new-event" type="text" class="form-control" placeholder="Event Title">
+                        <div class="input-group-append">
+                            <button id="add-new-event" type="button" class="btn btn-primary waves-effect">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-md-9">
+                    <div class="card card-primary">
+                      <div class="card-body no-padding">
+                        <!-- THE CALENDAR -->
+                        <div id="calendar"></div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </section>
+          </div>
+          <!-- Tugboat Assignment -->
+          <div class="tugboatAssignment animated fadeIn">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="card">
+                  <section class="sectionDark">
+                    <div class="container">
+                      <h5 class="section-header text-center" style="text-transform: uppercase;">
+                        Tugboat List 
+                        <a href="tugboat.html" class="float-right btn-sm btn btn-primary waves-effect" data-toggle="tooltip" title="Add Tugboat"><i class="fas fa-plus"></i></a>
+                      </h5>
+                    </div>
+                    <div class="row">
+                      <div class="col mr-3 ml-3">
+                        <a href="#">
+                        <div class="card">
+                          <div class="card-header">
+                            <h6 class="text-center mt-2">Energy Sun</h6>
+                          </div>
+                        </div>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="card">
+                  <section class="sectionDark">
+                    <div class="container">
+                      <h5 class="section-header text-center" style="text-transform: uppercase;">
+                        Schedule List  
+                      </h5>
+                    </div>
+                    <div class="container">
+                      <div class="card">
+                        <div class="card-header bg-success text-white">
+                          <div class="float-right">
+                            <a data-collapse="#availableSched" class="btn btn-icon"><i class="ion ion-minus"></i></a>
+                          </div>
+                          <h4 class="text-center ml-5">Available</h4>
+                        </div>
+                        <div class="collapse show" id="availableSched">
+                          <div class="card-body">
+                            <div class="card card-success">
+                              <div class="card-header text-center">
+                                <h4>August 24, 2018</h4>
+                              </div>
+                              <div class="card-body text-white">
+                                <div class="card bg-success">
+                                  <div class="card-header" id="dismissSched">
+                                    Energy Sun
+                                    <div class="float-right">
+                                      <a data-dismiss="#dismissSched" class="btn btn-icon"><i class="ion ion-close"></i></a>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -295,51 +480,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="card">
-                      <div class="card-header bg-info text-white">
-                        <div class="float-right">
-                          <a data-collapse="#occupiedTugboat" class="btn btn-icon"><i class="ion ion-plus"></i></a>
-                        </div>
-                        <h4 class="text-center ml-5">Occupied</h4>
-                      </div>
-                      <div class="collapse hide" id="occupiedTugboat">
-                        <div class="card-body">
-                          <div class="card card-sm">
-                            <div class="card-body text-center">
-                              Energy Sun
-                            </div>
-                            <div class="card-cta">
-                              <a href="#">More Info <i class="ion ion-ios-arrow-right"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header bg-danger text-white">
-                        <div class="float-right">
-                          <a data-collapse="#underRepair" class="btn btn-icon"><i class="ion ion-plus"></i></a>
-                        </div>
-                        <h4 class="text-center ml-5">Under Repair</h4>
-                      </div>
-                      <div class="collapse hide" id="underRepair">
-                        <div class="card-body">
-                          <div class="card card-sm">
-                            <div class="card-body text-center">
-                              Energy Sun
-                            </div>
-                            <div class="card-cta">
-                              <a href="#">More Info <i class="ion ion-ios-arrow-right"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+                  </section>
+                </div>
               </div>
             </div>
           </div>
+          
         </section>
       </div>
     </div>
@@ -495,7 +641,6 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary waves-effect modalClose">Close</button>
             <button type="submit" class="btn btn-primary waves-effect btnAddTeam">Add</button>
           </div>
         </div>
@@ -509,12 +654,18 @@
   <script src="../dist/modules/isotope/isotope.pkgd.min.js"></script>
   <script src="../dist/modules/interact/interact.min.js"></script>
   <script src="../dist/modules/isotope/masonry.pkgd.min.js"></script>
+  <script src="../dist/modules/jquery-ui.min.js"></script>
+  <script src="../dist/modules/moment/moment.js"></script>
+  <script src="../dist/modules/fullcalendar/fullcalendar.min.js"></script>
   <script src="../dist/modules/sweetalerts/sweetalert.min.js"></script>
   <script src="../dist/modules/waves/waves.js"></script>
   <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
   <script src="../dist/modules/toastr/build/toastr.min.js"></script>
   <script src="../dist/js/scripts.js"></script>
-  <script src="../dist/js/teambuilder.js"></script>
+  <script src="../dist/js/dispatchHauling.js"></script>
   <script src="../dist/js/demo.js"></script>
+  <script>
+  
+  </script>
 </body>
 </html>
