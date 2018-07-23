@@ -1,7 +1,6 @@
 
 # Capstone-Tugboat-Laravel-dev
 
-<<<<<<< HEAD
 ### July 24, 2018 02:06 AM
 - Added files
     - dist/modules/jquery-ui.min.js
@@ -57,7 +56,6 @@
     - `new` dist/modules/sweetalerts
             - sweetalert.css
             - sweetalert.min.js
-=======
 ### Development `Phase 1` update `7`
 
 ### July 21, 2018
@@ -93,7 +91,6 @@ dist/modules/waves
 - [x] `new` dist/modules/sweetalerts
         - [x] sweetalert.css
         - [x] sweetalert.min.js
->>>>>>> 36227ace3198095d28ddf6d936208c0d82bc9090
     - `new` dist/modules/smartwizard
         - `new` dist/modules/smartwizard/css
             - [x] smart_wizard_theme_arrows.min.css
