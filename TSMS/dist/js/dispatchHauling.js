@@ -71,7 +71,7 @@ $(document).ready(function(){
     $('.btnCreateSched').removeClass('active');
     $('.btnTugboatAssign').removeClass('active');
     $('.tugboatAssignment').css('display','none');
-    $('.teamAssignment').css('display','none');
+    $('.createSched').css('display','none');
     $('.teamAssignment').css('display','block');
   });
   $('.btnCreateSched').on('click',function() {
@@ -99,7 +99,6 @@ $(document).ready(function(){
 
   
   $(function () {
-
     /* initialize the external events
      -----------------------------------------------------------------*/
     function init_events(ele) {
@@ -129,6 +128,7 @@ $(document).ready(function(){
     /* initialize the calendar
      -----------------------------------------------------------------*/
     //Date for the calendar events (dummy data)
+    
     var date = new Date()
     var d    = date.getDate(),
         m    = date.getMonth(),

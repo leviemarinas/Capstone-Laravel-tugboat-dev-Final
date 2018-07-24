@@ -1,4 +1,3 @@
-
 # Capstone-Tugboat-Laravel-dev
 
 ### July 24, 2018 02:06 AM
@@ -25,37 +24,39 @@
         - added tugboat assignment view
         - added create schedule view
         
-### July 21, 2018 12:14 AM
-- Added files
-    - dist/css/skins/maroon.css
-- Added folder
-    - dist/modules/waves
-        - waves.css
-        - waves.js
-- Fixed files
-    - position.html
-        - add and edit views are now in modal
-    - added toastr to:
-        - team-builder.html
-        - contract.html
--  Removed Files
-    - from dist/css
-        - fontMontserrat.css
-        - fontOpenSans.css
-        - noCard.css
+### Development `Phase 1` Update `8`
 
-### July 19, 2018 01:30 AM
+`new`
 
-- Added Files
-    - contract.js
-    - contract.html
+`additions`
+* `js/berth/berth.js` berth maintenance scripts
+* `js/employee/employee.js`employee maintenance scripts
+* `js/pier/pier.js` pier maintenance scripts
+* `js/position/position.js`position maintenance scripts
+* `js/user/user/user.js` user maintenance scripts
 
-### July 19, 2018 10:33 PM
+#### these are for the additional maintenance usertype
 
-- Added Folder
-    - `new` dist/modules/sweetalerts
-            - sweetalert.css
-            - sweetalert.min.js
+- [x] `new` UsertypeController
+- [x] `new` User.php
+
+* `newTemplates` for real This Time and Final 
+- [x] `new` newInlineScripts.blade.php
+- [x] `new` newNavbar.blade.php
+- [x] `new` newSidebar.blade.php
+- [x] `new` newTemplate.blade.php
+- [x] `new` newTemplateScripts.blade.php
+- [x] `new` newTemplateStyle.blade.php
+
+##### this views are the master template for the whole application, if the views gets fucked somewhere here is maybe the problem.
+
+`deletions`
+* this base template had too many bugs `masterTemplate.blade.php` it's time for you to go, you've served your purpose. `bye`
+
+`updates`
+- [x] The Maintenance is Finally Finished And Ready to be Tested.
+* contracts has been moved to the utilites
+
 ### Development `Phase 1` update `7`
 
 ### July 21, 2018
