@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    $('select').niceSelect();
   //Initialize Date Picker for Last Dry Docked
   $('#editLastDryDocked').datepicker();
   $('#AddLastDryDocked').datepicker();
@@ -303,17 +303,12 @@ $('.btnAdd').on('click',function() {
     title: "New Tugboat Successfully Added!",
     type: "success",
     showCancelButton: false,
-    confirmButtonClass: "btn-primary",
+    confirmButtonClass: "btn-primary waves-effect",
     confirmButtonText: "Ok",
     closeOnConfirm: false
 },
   function(){
-    if(window.location.href.indexOf("tugboat.html") > -1) {
       window.location = "tugboat.html"
-    }
-    else if(window.location.href.indexOf("position.html") > -1) {
-    window.location = "position.html"
-    }
   });
 });
 
@@ -395,7 +390,7 @@ $('.btnAdd').on('click',function() {
           text: "Save changes?",
           type: "info",
           showCancelButton: true,
-          confirmButtonClass: "btn-primary",
+          confirmButtonClass: "btn-primary waves-effect",
           confirmButtonText: "Confirm",
           closeOnConfirm: false
       },
@@ -426,7 +421,7 @@ $('.btnAdd').on('click',function() {
               text: "Save changes?",
               type: "info",
               showCancelButton: true,
-              confirmButtonClass: "btn-primary",
+              confirmButtonClass: "btn-primary waves-effect",
               confirmButtonText: "Confirm",
               closeOnConfirm: false
           },
@@ -442,7 +437,7 @@ $('.btnAdd').on('click',function() {
           text: "Save changes?",
           type: "info",
           showCancelButton: true,
-          confirmButtonClass: "btn-primary",
+          confirmButtonClass: "btn-primary waves-effect",
           confirmButtonText: "Confirm",
           closeOnConfirm: false
       },

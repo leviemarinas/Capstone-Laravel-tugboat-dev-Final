@@ -1,45 +1,5 @@
 $(document).ready(function(){
-// Go back
-$('.btnBack').on('click',function(s) {
-  s.preventDefault();
-  swal({
-      title: "You haven't saved your changes",
-      text: "Are you sure you want to go back?",
-      type: "error",
-      showCancelButton: true,
-      confirmButtonClass: "btn-danger waves-effect",
-      confirmButtonText: "Ok",
-      closeOnConfirm: false
-  },
-  function(){
-    if(window.location.href.indexOf("tugboat.html") > -1) {
-      window.location = "tugboat.html"
-    }
-    else if(window.location.href.indexOf("position.html") > -1) {
-    window.location = "position.html"
-    }
-  });
-});
 
-  // Add button for all add views
-  $('.btnAdd').on('click',function() {
-    swal({
-      title: "New Tugboat Successfully Added!",
-      type: "success",
-      showCancelButton: false,
-      confirmButtonClass: "btn-primary",
-      confirmButtonText: "Ok",
-      closeOnConfirm: false
-  },
-    function(){
-      if(window.location.href.indexOf("tugboat.html") > -1) {
-        window.location = "tugboat.html"
-      }
-      else if(window.location.href.indexOf("position.html") > -1) {
-      window.location = "position.html"
-      }
-    });
-  });
 // Initialize Tooltip
 $('[data-toggle="tooltip"]').tooltip();
 
@@ -93,11 +53,9 @@ buttons: [
   });
 
   table.buttons().container().appendTo('.exportButtons');
-
-  $('.toast-close-button').css('color','black');
   toastr.options = {
     "closeButton": true,
-    "positionClass": "toast-top-center",
+    "positionClass": "toast-top-right",
     "showDuration": "5000",
     "hideDuration": "1000",
     "timeOut": "2000",
@@ -130,19 +88,47 @@ buttons: [
         swal("Deleted!", "Energy Sun has been deleted.", "success");
     });
   });
-  $('.btnEdit').on('click',function() {
+      
+  $('.btnAdd').on('click',function(s) {
+    $('#addModal').modal('hide');
+    s.preventDefault();
     swal({
-        title: "Changes won't be undone.",
-        text: "Save changes?",
-        type: "info",
-        showCancelButton: true,
-        confirmButtonClass: "btn-primary waves-effect",
-        confirmButtonText: "Confirm",
-        closeOnConfirm: false
-    },
-    function(){
-        swal("Updated!", "Position has been updated.", "success");
+      title: "Are you sure?",
+      text: "New Position will be added.",
+      type: "info",
+      showCancelButton: true,
+      confirmButtonClass: "btn-primary waves-effect",
+      confirmButtonText: "Ok",
+      closeOnConfirm: false
+  },
+    function(isConfirm) {
+      if (isConfirm) {
+        swal("Added Successfully!", "New Position has been added!", "success");
+      } else {
+        $('#addModal').modal('show');
+      }
     });
   });
 
+  $('.btnEdit').on('click',function(e) {
+    $('#editModal').modal('hide');
+    e.preventDefault();
+    swal({
+      title: "Changes won't be undone.",
+      text: "Save Changes?",
+      type: "info",
+      showCancelButton: true,
+      confirmButtonClass: "btn-primary waves-effect",
+      confirmButtonText: "Ok",
+      closeOnConfirm: false
+  },
+    function(isConfirm) {
+      if (isConfirm) {
+        swal("Updated!", "Position has been updated.", "success");
+      } else {
+        $('#editModal').modal('show');
+      }
+    });
+  });
+  
 });

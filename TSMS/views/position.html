@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../dist/modules/datatables/datatables.css">
   <link rel="stylesheet" href="../dist/css/demo.css">
   <link rel="stylesheet" href="../dist/css/style.css">
-  <link rel="stylesheet" href="../dist/css/fontMontserrat.css">
   <link rel="stylesheet" href="../dist/modules/waves/waves.css">
   <link rel="stylesheet" href="../dist/css/animate.min.css">
   <link rel="stylesheet" href="../dist/css/cssAll.css">
@@ -140,7 +139,7 @@
                   </ul>
                 </li>
                 <li><a href="general.html"><i class="fas fa-ticket-alt"></i>Dispatch Ticket</a></li>
-                <li><a href="team-builder.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
+                <li><a href="dispatchHauling.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
                 <li><a href="buttons.html"><i class="ion ion-ios-list"></i>Invoice</a></li>
                 <li><a href="toastr.html"><i class="ion ion-clipboard"></i>Job Order</a></li>
                 <li><a href="buttons.html"><i class="ion ion-cash"></i>Payment &amp; Billing</a></li>
@@ -323,7 +322,7 @@
                 <label for="addPosition">Position<sup class="text-primary">&#10033;</sup></label>
                 <input type="text" class="form-control" id="addPosition" name="addPosition" placeholder="Position">
               </div>
-              <button type="submit" class="btn btn-primary waves-effect float-right">Save changes</button>
+              <button type="button" class="btnAdd btn btn-primary waves-effect float-right">Save changes</button>
             </form>
           </div>
         </div>
@@ -340,12 +339,12 @@
             </button>
           </div>
           <div class="modal-body modalBody">
-            <form>
+            <form id="editForm">
               <div class="form-group">
                 <label for="editPosition">Position<sup class="text-primary">&#10033;</sup></label>
                 <input type="text" class="form-control" id="editPosition" name="editPosition" placeholder="Position">
               </div>
-              <button type="submit" class="btn btn-primary waves-effect float-right">Save changes</button>
+              <button type="button" class="btnEdit btn btn-primary waves-effect float-right">Save changes</button>
             </form>
           </div>
         </div>

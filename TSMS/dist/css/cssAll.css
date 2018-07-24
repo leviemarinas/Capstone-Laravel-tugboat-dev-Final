@@ -1,6 +1,9 @@
 html,body{
     font-family: 'Montserrat', sans-serif;
 }
+#teamBuilder, #sectionSelected, .sectionDark{
+  background-color: #ebebeb;
+}
 .smCat{
     font-size: 15px;
 }
@@ -13,6 +16,9 @@ input[type=date]::-webkit-inner-spin-button,
 input[type=date]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+li:hover{
+  cursor: default;
 }
 .toast {
   opacity: 1 !important;

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../dist/modules/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../dist/modules/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="../dist/modules/sweetalerts/sweetalert.css">
+  <link rel="stylesheet" href="../dist/modules/nice-select/nice-select.css">
   <link rel="stylesheet" href="../dist/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="../dist/modules/smartwizard/css/smart_wizard.min.css">
   <link rel="stylesheet" href="../dist/modules/smartwizard/css/smart_wizard_theme_arrows.min.css">
@@ -145,7 +146,7 @@
                   </ul>
                 </li>
                 <li><a class="waves-effect" href="general.html"><i class="fas fa-ticket-alt"></i>Dispatch Ticket</a></li>
-                <li><a class="waves-effect" href="team-builder.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
+                <li><a class="waves-effect" href="dispatchHauling.html"><i class="ion ion-android-boat"></i>Dispatch &amp; Hauling</a></li>
                 <li><a class="waves-effect" href="buttons.html"><i class="ion ion-ios-list"></i>Invoice</a></li>
                 <li><a class="waves-effect" href="toastr.html"><i class="ion ion-clipboard"></i>Job Order</a></li>
                 <li><a class="waves-effect" href="buttons.html"><i class="ion ion-cash"></i>Payment &amp; Billing</a></li>
@@ -661,8 +662,8 @@
                         Sort
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="sortName dropdown-item active" href="#">Name</a>
-                      <a class="sortHP dropdown-item" href="#">Horse Power</a>
+                      <a class="sortName dropdown-item active waves-effect" href="#">Name</a>
+                      <a class="sortHP dropdown-item waves-effect" href="#">Horse Power</a>
                     </div>
                   </div>
                 </div>
@@ -1034,15 +1035,21 @@
                             <div class="niceCountryInputSelector form-control" style="width: 300px;" data-selectedcountry="PH" data-showspecial="false" data-showflags="true" data-i18nall="All selected"
                               data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback">
                             </div>
-                            </div>
                           </div>
                         </div>
+                      </div>
                       <!-- Second Row w/ 3 Columns-->
                       <div class="row">
                         <div class="col">
                           <div class="form-group">
-                            <label for="AddType">Type<sup class="text-primary">&#10033;</sup></label>
-                            <input type="text" class="form-control" id="AddType" name="AddType" placeholder="Tugboat Type">
+                            <label for="addType">Type<sup class="text-primary">&#10033;</sup></label>
+                            <div>
+                              <select class="wide">
+                                <option value="hauling">Hauling</option>
+                                <option value="assisting">Assisting</option>
+                                <option value="tugging">Tugging</option>
+                              </select>
+                            </div>
                           </div>
                         </div>
                         <div class="col">
@@ -1451,7 +1458,13 @@
                                   <div class="col">
                                     <div class="form-group">
                                       <label for="editType">Type<sup class="text-primary">&#10033;</sup></label>
-                                      <input type="text" class="form-control" id="editType" placeholder="Tugboat Type">
+                                      <div>
+                                        <select class="wide">
+                                          <option value="hauling">Hauling</option>
+                                          <option value="assisting">Assisting</option>
+                                          <option value="tugging">Tugging</option>
+                                        </select>
+                                      </div>
                                     </div>
                                   </div>
                                   <div class="col">
@@ -1540,6 +1553,7 @@
   <script src="../dist/modules/tooltip.js"></script>
   <script src="../dist/modules/datatables/datatables.min.js"></script>
   <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../dist/modules/nice-select/jquery.nice-select.min.js"></script>
   <script src="../dist/modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
   <script src="../dist/modules/smartwizard/js/jquery.smartWizard.min.js"></script>
   <script src="../dist/js/withCard.js"></script>

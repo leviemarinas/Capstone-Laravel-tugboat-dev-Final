@@ -11,9 +11,18 @@
 .niceCountryInputMenuDropdownContent a:hover {
 	background-color: #574B90 !important;
 }
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color:#574B90!important;
+}
 #teamBuilder #teamChoices a:hover, #teamBuilder #teamChoices a.filter-active {
   background-color: #39065A !important;
   color: #fff;
+}
+.btn-primary:not([disabled]):not(.disabled).active,
+.btn-primary:not([disabled]):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #39065A;
 }
 .demo-settings .demo-settings-toggle {
   background-color:#574B90 !important;
