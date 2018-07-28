@@ -1,52 +1,98 @@
 $(document).ready(function(){
+  $('[data-tooltip="tooltip"]').tooltip();
 // Isotope
-  var teamBuilderIsotope = $('#teamCard').isotope({
+  var addTeamBuilder = $('#addTeamCard').isotope({
     filter: '*',
     itemSelector: '.team-item',
     layoutMode: 'fitRows'
   });
-  $('#teamChoices a').on( 'click', function() {
-    $("#teamChoices a").removeClass('filter-active');
+  $('#addTeamChoices a').on( 'click', function() {
+    $("#addTeamChoices a").removeClass('filter-active');
     $(this).addClass('filter-active');
 
-    teamBuilderIsotope.isotope({ filter: $(this).data('filter') });
+    addTeamBuilder.isotope({ filter: $(this).data('filter') });
   });
-  // Filter Select
-  $('#ddAll').on('click',function() {
-    document.getElementById("ddChoices").innerHTML = "All";
-    $("#filterName").empty();
-    $("#filterName").removeClass("text-info text-success text-secondary text-primary");
-    $("#filterName").addClass("text-primary");
-    $("#filterName").append("All");
+  var editTeamBuilder = $('#editTeamCard').isotope({
+    filter: '*',
+    itemSelector: '.team-item',
+    layoutMode: 'fitRows'
   });
-  $('#ddCapt').on('click',function() {
-    document.getElementById("ddChoices").innerHTML = "Captain";
-    $("#filterName").empty();
-    $("#filterName").removeClass("text-info text-success text-secondary text-primary");
-    $("#filterName").addClass("text-success");
-    $("#filterName").append("Captain");
+  $('#editTeamChoices a').on( 'click', function() {
+    $("#editTeamChoices a").removeClass('filter-active');
+    $(this).addClass('filter-active');
+
+    editTeamBuilder.isotope({ filter: $(this).data('filter') });
   });
-  $('#ddChiefEng').on('click',function() {
-    document.getElementById("ddChoices").innerHTML = "Chief Engineer";
-    $("#filterName").empty();
-    $("#filterName").removeClass("text-info text-success text-secondary text-primary");
-    $("#filterName").addClass("text-info");
-    $("#filterName").append("Chief Engineer");
+  // Filter for Add
+  $('#addDdAll').on('click',function() {
+    document.getElementById("addDdChoices").innerHTML = "All";
+    $("#addFilterName").empty();
+    $("#addFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#addFilterName").addClass("text-primary");
+    $("#addFilterName").append("All");
   });
-  $('#ddCrew').on('click',function() {
-    document.getElementById("ddChoices").innerHTML = "Crew";
-    $("#filterName").empty();
-    $("#filterName").removeClass("text-info text-success text-secondary text-primary");
-    $("#filterName").addClass("text-secondary");
-    $("#filterName").append("Crew");
+  $('#addDdCapt').on('click',function() {
+    document.getElementById("addDdChoices").innerHTML = "Captain";
+    $("#addFilterName").empty();
+    $("#addFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#addFilterName").addClass("text-success");
+    $("#addFilterName").append("Captain");
+  });
+  $('#addDdChiefEng').on('click',function() {
+    document.getElementById("addDdChoices").innerHTML = "Chief Engineer";
+    $("#addFilterName").empty();
+    $("#addFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#addFilterName").addClass("text-info");
+    $("#addFilterName").append("Chief Engineer");
+  });
+  $('#addDdCrew').on('click',function() {
+    document.getElementById("addDdChoices").innerHTML = "Crew";
+    $("#addFilterName").empty();
+    $("#addFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#addFilterName").addClass("text-secondary");
+    $("#addFilterName").append("Crew");
   });
 
+  //  Filter for Edit
+  $('#editDdAll').on('click',function() {
+    document.getElementById("editDdChoices").innerHTML = "All";
+    $("#editFilterName").empty();
+    $("#editFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#editFilterName").addClass("text-primary");
+    $("#editFilterName").append("All");
+  });
+  $('#editDdCapt').on('click',function() {
+    document.getElementById("editDdChoices").innerHTML = "Captain";
+    $("#editFilterName").empty();
+    $("#editFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#editFilterName").addClass("text-success");
+    $("#editFilterName").append("Captain");
+  });
+  $('#editDdChiefEng').on('click',function() {
+    document.getElementById("editDdChoices").innerHTML = "Chief Engineer";
+    $("#editFilterName").empty();
+    $("#editFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#editFilterName").addClass("text-info");
+    $("#editFilterName").append("Chief Engineer");
+  });
+  $('#editDdCrew').on('click',function() {
+    document.getElementById("editDdChoices").innerHTML = "Crew";
+    $("#editFilterName").empty();
+    $("#editFilterName").removeClass("text-info text-success text-secondary text-primary");
+    $("#editFilterName").addClass("text-secondary");
+    $("#editFilterName").append("Crew");
+  });
   $('.modalClose').on('click',function() {
     $('#addTeam').modal('hide');
+    $('#editTeam').modal('hide');
   });
   $('.btnAddTeam').on('click',function() {
     $('#addTeam').modal('hide');
-    toastr.success('Team Name has been added.', 'Add Successful!',{ closeButton: true });
+    toastr.success('New Team has been added.', 'Add Successful!',{ closeButton: true });
+  });
+  $('.btnEditTeam').on('click',function() {
+    $('#editTeam').modal('hide');
+    toastr.success('Team has been edited.', 'Edit Successful!',{ closeButton: true });
   });
   $('.delItem').on('click',function() {
     swal({

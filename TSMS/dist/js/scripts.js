@@ -1,3 +1,4 @@
+
 // ChartJS
 if(window.Chart) {
 	Chart.defaults.global.defaultFontFamily = "'Segoe UI', 'Arial'";

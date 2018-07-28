@@ -1,13 +1,10 @@
 $(document).ready(function(){
 
-  // Custom Select
-  $('select').niceSelect();
-
   // Custom tooltip selector
   $('[data-tooltip="tooltip"]').tooltip();
 
   // Initialize Summernote
-  $(".summernoteContract").summernote({
+  $(".summernoteQuote").summernote({
     minHeight: 350,
     disableDragAndDrop: true,
     fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18','20','22','24','26','28', '36', '48' , '72'],
@@ -26,19 +23,19 @@ $(document).ready(function(){
   });
   // Close Modal
   $('.modalClose').on('click',function() {
-    $('#viewContractInfo').modal('hide');
-    $('#editContractInfo').modal('hide');
+    $('#viewQuoteInfo').modal('hide');
+    $('#editQuoteInfo').modal('hide');
   });
   // Modal Edit
   $('#modalEdit').on('click',function() {
-    $('#viewContractInfo').modal('hide');
-    $('#editContractInfo').modal('show');
+    $('#viewQuoteInfo').modal('hide');
+    $('#editQuoteInfo').modal('show');
   });
   // Sweet Alerts
   $('.delItem').on('click',function() {
     swal({
         title: "Are you sure?",
-        text: "You will not be able to recover this Contract.",
+        text: "You will not be able to recover this Quotation.",
         type: "error",
         showCancelButton: true,
         confirmButtonClass: "btn-danger",
@@ -46,11 +43,11 @@ $(document).ready(function(){
         closeOnConfirm: false
     },
     function(){
-        swal("Deleted!", "Contract has been deleted.", "success");
+        swal("Deleted!", "Quotation has been deleted.", "success");
     });
   });
   $('#editSave').on('click',function(e) {
-    $('#editContractInfo').modal('hide');
+    $('#editQuoteInfo').modal('hide');
     e.preventDefault();
     swal({
       title: "Changes won't be undone.",
@@ -63,9 +60,9 @@ $(document).ready(function(){
   },
     function(isConfirm) {
       if (isConfirm) {
-        swal("Updated!", "Contract has been updated.", "success");
+        swal("Updated!", "Quotation has been updated.", "success");
       } else {
-        $('#editContractInfo').modal('show');
+        $('#editQuoteInfo').modal('show');
       }
     });
   });

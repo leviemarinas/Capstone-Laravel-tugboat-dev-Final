@@ -243,7 +243,9 @@
                     <div class="container">
                       <h5 class="section-header text-center" style="text-transform: uppercase;">
                         Team List 
-                        <button class="float-right btn-sm btn btn-primary waves-effect" data-toggle="modal" data-target="#addTeam"><i class="fas fa-plus"></i></button>
+                        <button class="float-right btn-sm btn btn-primary waves-effect" data-toggle="modal" data-target="#addTeam" data-tooltip="tooltip" title="Add New Team">
+                          <i class="fas fa-plus"></i>
+                        </button>
                       </h5>
                     </div>
                     <div class="row">
@@ -252,10 +254,10 @@
                         <div class="card">
                           <div class="card-body">
                             <h6 class="float-left mt-2">Team Energy Sun</h6>
-                            <button type="button" class="delItem btn btn-sm btn-danger waves-effect waves-circle float-right">
+                            <button type="button" class="delItem btn btn-sm btn-danger waves-effect waves-circle float-right" data-toggle="tooltip" title="Delete">
                               <i class="miniIcon fas fa-trash"></i>
                             </button> 
-                            <button type="button" class="btn btn-sm btn-secondary waves-effect waves-circle float-right mr-2">
+                            <button type="button" class="btn btn-sm btn-secondary waves-effect waves-circle float-right mr-2"data-toggle="modal" data-target="#editTeam" data-tooltip="tooltip" title="Edit">
                                 <i class="miniIcon ion ion-edit"></i>
                             </button>
                           </div>
@@ -426,7 +428,7 @@
                     <div class="container">
                       <h5 class="section-header text-center" style="text-transform: uppercase;">
                         Tugboat List 
-                        <a href="tugboat.html" class="float-right btn-sm btn btn-primary waves-effect"><i class="fas fa-plus"></i></a>
+                        <a href="tugboat.html" class="float-right btn-sm btn btn-primary waves-effect"data-toggle="tooltip" title="Add new Tugboat"><i class="fas fa-plus"></i></a>
                       </h5>
                     </div>
                     <div class="row">
@@ -490,59 +492,62 @@
       </div>
     </div>
   </div>
-    <!-- Modal -->
+    <!-- Add Modal -->
     <div class="modal fade" id="addTeam" tabindex="-1" role="dialog" aria-labelledby="addTeamLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content  sectionDark">
+        <div class="modal-content sectionDark">
           <div class="modal-header">
-            <h4 class="modal-title" id="addTeamLabel">TEAM BUILDER</h4>
+            <h4 class="modal-title" id="addTeamLabel">
+              TEAM BUILDER
+                <small class="smCat">Add Team</small>
+            </h4>
             <button type="button" class="close modalClose"aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body modalBody">
             <form class=" mb-3">
-                <label for="teamName">Team Name<sup class="text-primary">&#10033;</sup></label>
-                <input type="text" class="form-control" id="teamName" placeholder="Team 1">
+                <label for="addTeamName">Team Name<sup class="text-primary">&#10033;</sup></label>
+                <input type="text" class="form-control" id="addTeamName" placeholder="Team 1">
             </form>
             <div class="row">
               <div class="col-12">
                 <div class="card text-center">
                   <div class="card-header">
                     <div class="float-right">
-                      <a data-collapse="#employeeCard" class="btn btn-icon"><i class="ion ion-minus"></i></a>
+                      <a data-collapse="#addEmployeeCard" class="btn btn-icon"><i class="ion ion-minus"></i></a>
                     </div>
                     <h5 class="text-center ml-5">Employees</h5>
                   </div>
-                  <div class="collapse show" id="employeeCard">
+                  <div class="collapse show" id="addEmployeeCard">
                     <div class="card-body">
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group form-inline">
-                            <div class="dropdown mr-4" id="teamChoices">
-                              <button class="btn btn-primary dropdown-toggle waves-effect" type="button" id="ddChoices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown mr-4" id="addTeamChoices">
+                              <button class="btn btn-primary dropdown-toggle waves-effect" type="button" id="addDdChoices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 All
                               </button>
-                              <div class="dropdown-menu" aria-labelledby="ddChoices">
-                                <a id="ddAll" data-filter="*" class="waves-effect dropdown-item" href="#">All</a>
-                                <a id="ddCapt" data-filter=".teamCaptain" class="waves-effect dropdown-item" href="#">Captain</a>
-                                <a id="ddChiefEng" data-filter=".teamChiefEng" class="waves-effect dropdown-item" href="#">Chief Engineer</a>
-                                <a id="ddCrew" data-filter=".teamCrew" class="waves-effect dropdown-item" href="#">Crew</a>
+                              <div class="dropdown-menu" aria-labelledby="addDdChoices">
+                                <a id="addDdAll" data-filter="*" class="waves-effect dropdown-item" href="#">All</a>
+                                <a id="addDdCapt" data-filter=".addTeamCaptain" class="waves-effect dropdown-item" href="#">Captain</a>
+                                <a id="addDdChiefEng" data-filter=".addTeamChiefEng" class="waves-effect dropdown-item" href="#">Chief Engineer</a>
+                                <a id="addDdCrew" data-filter=".addTeamCrew" class="waves-effect dropdown-item" href="#">Crew</a>
                               </div>
                             </div>
-                            <h6 class="mt-2 mr-2">Filter:<h6 class="mt-2"id="filterName">All</h6></h6>
+                            <h6 class="mt-2 mr-2">Filter:<h6 class="mt-2 text-primary" id="addFilterName">All</h6></h6>
                           </div>
                         </div>
                       </div>
-                      <div class="row" id="teamCard">
-                        <div class="teamCaptain team-item mr-3 ml-3">
+                      <div class="row" id="addTeamCard">
+                        <div class="addTeamCaptain team-item mr-3 ml-3">
                           <div class="row">
                             <div class="col-auto">
                               <div class="card bg-success">
                                 <div class="card-body">
                                   <div class="custom-control custom-checkbox custom-control-inline">
-                                    <input type="checkbox" id="checkCapt1" class="custom-control-input">
-                                    <label class="custom-control-label" for="checkCapt1">
+                                    <input type="checkbox" id="addCheckCapt1" class="custom-control-input">
+                                    <label class="custom-control-label" for="addCheckCapt1">
                                       <p class="card-text text-center ml-2">Joshua Ganila</p>
                                       <small class="text-center float-right" style="text-transform: uppercase;">
                                         Captain  
@@ -556,8 +561,8 @@
                               <div class="card bg-success">
                                 <div class="card-body">
                                   <div class="custom-control custom-checkbox custom-control-inline">
-                                    <input type="checkbox" id="checkCapt2" class="custom-control-input">
-                                    <label class="custom-control-label" for="checkCapt2">
+                                    <input type="checkbox" id="addCheckCapt2" class="custom-control-input">
+                                    <label class="custom-control-label" for="addCheckCapt2">
                                       <p class="card-text text-center ml-2">Levie Anne Mariñas</p>
                                       <small class="text-center float-right" style="text-transform: uppercase;">
                                         Captain  
@@ -569,14 +574,14 @@
                             </div>
                           </div>
                         </div>
-                        <div class="teamChiefEng team-item mr-3 ml-3">
+                        <div class="addTeamChiefEng team-item mr-3 ml-3">
                           <div class="row">
                             <div class="col-auto">
                               <div class="card bg-info">
                                 <div class="card-body">
                                   <div class="custom-control custom-checkbox custom-control-inline">
-                                    <input type="checkbox" id="checkCE1" class="custom-control-input">
-                                    <label class="custom-control-label" for="checkCE1">
+                                    <input type="checkbox" id="addCheckCE1" class="custom-control-input">
+                                    <label class="custom-control-label" for="addCheckCE1">
                                       <p class="card-text text-center ml-2">John Carlos Pagaduan</p>
                                       <small class="text-center float-right" style="text-transform: uppercase;">
                                         Chief Engineer  
@@ -588,14 +593,14 @@
                             </div>
                           </div>
                         </div>
-                        <div class="teamCrew team-item  mr-3 ml-3">
+                        <div class="addTeamCrew team-item  mr-3 ml-3">
                           <div class="row">
                             <div class="col-auto">
                               <div class="card bg-secondary">
                                 <div class="card-body">
                                   <div class="custom-control custom-checkbox custom-control-inline">
-                                    <input type="checkbox" id="checkCrew1" class="custom-control-input">
-                                    <label class="custom-control-label" for="checkCrew1">
+                                    <input type="checkbox" id="addCheckCrew1" class="custom-control-input">
+                                    <label class="custom-control-label" for="addCheckCrew1">
                                       <p class="card-text text-center ml-2">Reign Emmanuel Malto</p>
                                       <small class="text-center float-right" style="text-transform: uppercase;">
                                         Crew  
@@ -616,19 +621,19 @@
                 <div class="card text-center">
                   <div class="card-header">
                     <div class="float-right">
-                      <a data-collapse="#selectedCard" class="btn btn-icon"><i class="ion ion-minus"></i></a>
+                      <a data-collapse="#addSelectedCard" class="btn btn-icon"><i class="ion ion-minus"></i></a>
                     </div>
                     <h5 class="text-center ml-5">Selected</h5>
                   </div>
-                  <div class="collapse show" id="selectedCard">
+                  <div class="collapse show" id="addSelectedCard">
                     <div class="card-body">
                       <div class="row">
                         <div class="col">
-                          <div class="card bg-info" id="dismissCard">
+                          <div class="card bg-info" id="addDismissCard">
                             <div class="card-header">
                                 John Carlos Pagaduan
                               <div class="float-right">
-                                <a data-dismiss="#dismissCard" class="btn btn-icon"><i class="ion ion-close"></i></a>
+                                <a data-dismiss="#addDismissCard" class="btn btn-icon"><i class="ion ion-close"></i></a>
                               </div>
                             </div>
                           </div>
@@ -646,27 +651,181 @@
         </div>
       </div>
     </div>
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editTeam" tabindex="-1" role="dialog" aria-labelledby="editTeamLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content sectionDark">
+            <div class="modal-header">
+              <h4 class="modal-title" id="editTeamLabel">
+                TEAM BUILDER
+                  <small class="smCat">Edit Team</small>
+              </h4>
+              <button type="button" class="close modalClose"aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modalBody">
+              <form class=" mb-3">
+                  <label for="editTeamName">Team Name<sup class="text-primary">&#10033;</sup></label>
+                  <input type="text" class="form-control" id="editTeamName" placeholder="Team 1">
+              </form>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card text-center">
+                    <div class="card-header">
+                      <div class="float-right">
+                        <a data-collapse="#editEmployeeCard" class="btn btn-icon"><i class="ion ion-minus"></i></a>
+                      </div>
+                      <h5 class="text-center ml-5">Employees</h5>
+                    </div>
+                    <div class="collapse show" id="editEmployeeCard">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group form-inline">
+                              <div class="dropdown mr-4" id="editTeamChoices">
+                                <button class="btn btn-primary dropdown-toggle waves-effect" type="button" id="editDdChoices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  All
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="editDdChoices">
+                                  <a id="editDdAll" data-filter="*" class="waves-effect dropdown-item" href="#">All</a>
+                                  <a id="editDdCapt" data-filter=".editTeamCaptain" class="waves-effect dropdown-item" href="#">Captain</a>
+                                  <a id="editDdChiefEng" data-filter=".editTeamChiefEng" class="waves-effect dropdown-item" href="#">Chief Engineer</a>
+                                  <a id="editDdCrew" data-filter=".editTeamCrew" class="waves-effect dropdown-item" href="#">Crew</a>
+                                </div>
+                              </div>
+                              <h6 class="mt-2 mr-2">Filter:<h6 class="mt-2 text-primary"id="editFilterName">All</h6></h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row" id="editTeamCard">
+                          <div class="editTeamCaptain team-item mr-3 ml-3">
+                            <div class="row">
+                              <div class="col-auto">
+                                <div class="card bg-success">
+                                  <div class="card-body">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                      <input type="checkbox" id="editCheckCapt1" class="custom-control-input">
+                                      <label class="custom-control-label" for="editCheckCapt1">
+                                        <p class="card-text text-center ml-2">Joshua Ganila</p>
+                                        <small class="text-center float-right" style="text-transform: uppercase;">
+                                          Captain  
+                                        </small>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-auto">
+                                <div class="card bg-success">
+                                  <div class="card-body">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                      <input type="checkbox" id="editCheckCapt2" class="custom-control-input">
+                                      <label class="custom-control-label" for="editCheckCapt2">
+                                        <p class="card-text text-center ml-2">Levie Anne Mariñas</p>
+                                        <small class="text-center float-right" style="text-transform: uppercase;">
+                                          Captain  
+                                        </small>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="editTeamChiefEng team-item mr-3 ml-3">
+                            <div class="row">
+                              <div class="col-auto">
+                                <div class="card bg-info">
+                                  <div class="card-body">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                      <input type="checkbox" id="editCheckCE1" class="custom-control-input">
+                                      <label class="custom-control-label" for="editCheckCE1">
+                                        <p class="card-text text-center ml-2">John Carlos Pagaduan</p>
+                                        <small class="text-center float-right" style="text-transform: uppercase;">
+                                          Chief Engineer  
+                                        </small>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="editTeamCrew team-item  mr-3 ml-3">
+                            <div class="row">
+                              <div class="col-auto">
+                                <div class="card bg-secondary">
+                                  <div class="card-body">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                      <input type="checkbox" id="editCheckCrew1" class="custom-control-input">
+                                      <label class="custom-control-label" for="editCheckCrew1">
+                                        <p class="card-text text-center ml-2">Reign Emmanuel Malto</p>
+                                        <small class="text-center float-right" style="text-transform: uppercase;">
+                                          Crew  
+                                        </small>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card text-center">
+                    <div class="card-header">
+                      <div class="float-right">
+                        <a data-collapse="#editSelectedCard" class="btn btn-icon"><i class="ion ion-minus"></i></a>
+                      </div>
+                      <h5 class="text-center ml-5">Selected</h5>
+                    </div>
+                    <div class="collapse show" id="editSelectedCard">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col">
+                            <div class="card bg-info" id="editDismissCard">
+                              <div class="card-header">
+                                  John Carlos Pagaduan
+                                <div class="float-right">
+                                  <a data-dismiss="#editDismissCard" class="btn btn-icon"><i class="ion ion-close"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary waves-effect btnEditTeam">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <script src="../dist/modules/jquery.min.js"></script>
-    <script src="../dist/modules/popper.js"></script>
-    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
     <script src="../dist/modules/tooltip.js"></script>
-  <script src="../dist/modules/jquery-migrate.min.js"></script>
-  <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-  <script src="../dist/modules/isotope/isotope.pkgd.min.js"></script>
-  <script src="../dist/modules/interact/interact.min.js"></script>
-  <script src="../dist/modules/isotope/masonry.pkgd.min.js"></script>
-  <script src="../dist/modules/jquery-ui.min.js"></script>
-  <script src="../dist/modules/moment/moment.js"></script>
-  <script src="../dist/modules/fullcalendar/fullcalendar.js"></script>
-  <script src="../dist/modules/sweetalerts/sweetalert.min.js"></script>
-  <script src="../dist/modules/waves/waves.js"></script>
-  <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-  <script src="../dist/modules/toastr/build/toastr.min.js"></script>
-  <script src="../dist/js/scripts.js"></script>
-  <script src="../dist/js/dispatchHauling.js"></script>
-  <script src="../dist/js/demo.js"></script>
-  <script>
-  
-  </script>
+    <script src="../dist/modules/popper.js"></script>
+    <script src="../dist/modules/isotope/masonry.pkgd.min.js"></script>
+    <script src="../dist/modules/isotope/isotope.pkgd.min.js"></script>
+    <script src="../dist/modules/jquery-ui.min.js"></script>
+    <script src="../dist/modules/moment/moment.js"></script>
+    <script src="../dist/modules/fullcalendar/fullcalendar.js"></script>
+    <script src="../dist/modules/toastr/toastr.js"></script>
+    <script src="../dist/modules/sweetalerts/sweetalert.min.js"></script>
+    <script src="../dist/modules/waves/waves.js"></script>
+    <script src="../dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../dist/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+    <script src="../dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../dist/js/dispatchHauling.js"></script>
+    <script src="../dist/js/scripts.js"></script>
+    <script src="../dist/js/demo.js"></script>
 </body>
 </html>

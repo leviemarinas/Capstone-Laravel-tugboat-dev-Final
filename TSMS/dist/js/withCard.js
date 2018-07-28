@@ -1,5 +1,7 @@
 $(document).ready(function(){
+    // Custom Select
     $('select').niceSelect();
+
   //Initialize Date Picker for Last Dry Docked
   $('#editLastDryDocked').datepicker();
   $('#AddLastDryDocked').datepicker();
