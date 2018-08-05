@@ -71056,7 +71056,7 @@ this.pdfMake = this.pdfMake || {}; this.pdfMake.vfs = {
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": '<i class="ion ion-chevron-left"></i>'
 			},
 	
 			/**

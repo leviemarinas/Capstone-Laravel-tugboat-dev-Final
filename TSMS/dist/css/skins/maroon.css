@@ -48,6 +48,13 @@
   background-color: #800000 !important;
   color: #fff;
 }
+#moreInfoModal .modal-content{
+  border: solid 2px #924444;
+  border-radius:0px;
+}
+#moreInfoModal .modal-header{
+  border-bottom:solid 1px #924444;
+}
 .bg-primary {
   background-color: #924444 !important;
 }
@@ -58,7 +65,7 @@ a {
   color: #924444;
 }
 a:hover {
-  color: #924444;
+  color: #800000;
 }
 .btn-primary {
   background-color: #924444;
@@ -158,6 +165,7 @@ a:hover {
 }
 .border-primary {
   border-color: #924444 !important;
+  border: 0.5px solid #924444;
 }
 .text-primary {
   color: #924444 !important;
@@ -182,6 +190,13 @@ a:hover {
 
 .main-sidebar .sidebar-menu li ul.menu-dropdown li.active a {
   color: #924444;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a {
+	color: #505c66;
+	font-weight: 400;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a:hover {
+	color: #924444;
 }
 .alert.alert-primary {
   background-color: #924444;

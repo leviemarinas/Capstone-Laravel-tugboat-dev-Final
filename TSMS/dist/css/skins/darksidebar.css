@@ -36,6 +36,10 @@
 .main-sidebar .sidebar-menu li ul.menu-dropdown li.active a {
 	color: #fff;
 }
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a {
+	color: #868e96;
+	font-weight: 400;
+}
 .main-sidebar .sidebar-menu li a:hover {
 	background-color: #1f202e;
 }

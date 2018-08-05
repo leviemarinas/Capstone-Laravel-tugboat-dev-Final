@@ -149,11 +149,19 @@ a:hover {
   background-color: #3DC7BE;
   border-color: #3DC7BE;
 }
+#moreInfoModal .modal-content{
+  border: solid 2px #3DC7BE;
+  border-radius:0px;
+}
+#moreInfoModal .modal-header{
+  border-bottom:solid 1px #3DC7BE;
+}
 .bg-primary {
   background-color: #3DC7BE !important;
 }
 .border-primary {
   border-color: #3DC7BE !important;
+  border: 0.5px solid #3DC7BE;
 }
 .text-primary {
   color: #3DC7BE !important;
@@ -177,6 +185,13 @@ a:hover {
 }
 
 .main-sidebar .sidebar-menu li ul.menu-dropdown li.active a {
+	color: #3DC7BE;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a {
+	color: #505c66;
+	font-weight: 400;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a:hover {
 	color: #3DC7BE;
 }
 .alert.alert-primary {

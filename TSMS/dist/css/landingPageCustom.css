@@ -1,7 +1,6 @@
-.txtArea{
-  max-height: 350px;
-  min-height: 100px;
-}
+/* START --- New update August 5, 2018
+  Removed .txtArea css
+*/
 #map{
   border:none;
   height:215px;

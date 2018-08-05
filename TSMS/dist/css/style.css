@@ -52,7 +52,14 @@
   }
 .sw-theme-arrows>ul.step-anchor>li.done>a:after{
   border-left:30px solid #574B90;
-  }
+	}
+	#moreInfoModal .modal-content{
+		border: solid 2px #574B90;
+		border-radius:0px;
+	}
+	#moreInfoModal .modal-header{
+		border-bottom:solid 1px #574B90;
+	}
 body {
 	background-color: #F6F6F6;
 	font-size: 14px;
@@ -392,6 +399,10 @@ select.form-control:not([size]):not([multiple]) {
 .bg-primary {
 	background-color: #574B90 !important;
 }
+.border-primary {
+  border-color: #574B90 !important;
+  border: 0.5px solid #574B90;
+}
 .text-primary {
 	color: #574B90 !important;
 }
@@ -572,6 +583,13 @@ body.sidebar-gone .main-content {
 .main-sidebar .sidebar-menu li ul.menu-dropdown li.active a {
 	color: #574B90;
 	font-weight: 600;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a {
+	color: #505c66;
+	font-weight: 400;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a:hover {
+	color: #574B90;
 }
 .main-sidebar .sidebar-menu li ul.menu-dropdown li a i {
 	font-size: 16px;

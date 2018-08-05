@@ -6,7 +6,6 @@ html,body{
 }
 .smCat{
   font-size: 15px;
-  margin-left:5px;
 }
 .widthBtn{
   width:70px;
@@ -15,7 +14,9 @@ html,body{
   font-size:20px;
   margin-top: 2px;
 }
-
+a:link{
+  text-decoration: none;
+}
 .smCat2{
   font-size: 10px;
   margin-left:5px;
@@ -39,6 +40,9 @@ li:hover{
 .miniIcon{
   font-size:15px;
 }
+.bigIcon{
+  font-size:20px;
+}
 #footerLogo{
     height:100px; 
     width:auto;
@@ -56,3 +60,24 @@ li:hover{
 .modal {
   max-width: 100%;
 }
+/* START --- New update August 5, 2018 */
+.animated.faster {
+  -webkit-animation-duration: 100ms;
+  animation-duration: 100ms;
+}
+.animated.fast {
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+}
+textarea{
+  max-height: 500px;
+  min-height: 150px;
+}
+/* css for dispatchTicket.html */
+.viewDetails{
+  display: none;
+}
+.detailedTable th{
+  color: #fff !important;
+}
+/* END --- New update August 5, 2018 */

@@ -1,5 +1,71 @@
 # Capstone-Tugboat-Laravel-dev
 
+### August 5, 2018 11:24 PM
+- Added files
+    - dist/css
+        - dhScheduling.css
+        - dhJobOrder.css
+        - teamBuilder.css
+    - dist/js
+        - dhJobOrder.js
+        - dhScheduling.js
+        - dispatchTicket.js
+        - teamBuilder.js
+    - dist/views
+        - dhJobOrder.html
+        - dhScheduling.html
+        - dispatchTicket.html
+        - teamBuilder.html
+        - tugboatAssignment.html
+- Added folder
+    - dist/modules/tempus-dominus
+        - dist/modules/tempus-dominus
+            - tempus-dominus-date.css
+        - dist/modules/tempus-dominus
+            - tempus-dominus-date.js
+- Altered files
+    - dist/css
+        - dist/css/skins files
+        - cssAll.css
+        - landingPageCustom.css
+        - style.css
+        - withCard.css
+    - dist/css
+        - admin-dashboard.html
+        
+### Development `Phase 1` Update `8`
+
+`new`
+
+`additions`
+* `js/berth/berth.js` berth maintenance scripts
+* `js/employee/employee.js`employee maintenance scripts
+* `js/pier/pier.js` pier maintenance scripts
+* `js/position/position.js`position maintenance scripts
+* `js/user/user/user.js` user maintenance scripts
+
+#### these are for the additional maintenance usertype
+
+- [x] `new` UsertypeController
+- [x] `new` User.php
+
+* `newTemplates` for real This Time and Final 
+- [x] `new` newInlineScripts.blade.php
+- [x] `new` newNavbar.blade.php
+- [x] `new` newSidebar.blade.php
+- [x] `new` newTemplate.blade.php
+- [x] `new` newTemplateScripts.blade.php
+- [x] `new` newTemplateStyle.blade.php
+
+##### this views are the master template for the whole application, if the views gets fucked somewhere here is maybe the problem.
+
+`deletions`
+* this base template had too many bugs `masterTemplate.blade.php` it's time for you to go, you've served your purpose. `bye`
+
+`updates`
+- [x] The Maintenance is Finally Finished And Ready to be Tested.
+* contracts has been moved to the utilites
+
 ### July 24, 2018 02:06 AM
 - Added files
     - dist/modules/jquery-ui.min.js
@@ -283,6 +349,3 @@ added resources for controllers
 - Create - completed the necessary ui
 - Edit - not fully working
 - Index - no detailed view
-
-
-

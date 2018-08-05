@@ -2,15 +2,13 @@ $(document).ready(function(){
     // Custom Select
     $('select').niceSelect();
 
+    /* START --- New update August 5, 2018 */
   //Initialize Date Picker for Last Dry Docked
-  $('#editLastDryDocked').datepicker();
-  $('#AddLastDryDocked').datepicker();
-  //Initialize Date Picker for Date Built
-  $('#editDateBuilt').datepicker();
-  $('#AddDateBuilt').datepicker();
-  //Initialize Date Picker for License Expiration Date
-  $('#editLicenseExpDate').datepicker();
-  $('#AddLicenseExpDate').datepicker();
+  $('#AddLastDryDocked,#AddDateBuilt,#AddLicenseExpDate,#editLastDryDocked,#editDateBuilt,#editLicenseExpDate').datetimepicker({
+    format: 'L'
+  });
+  /* Removed old datepicker
+    END --- New update August 5, 2018 */
   // Country Picker
   $(".niceCountryInputSelector").each(function(i,e){
       new NiceCountryInput(e).init();
@@ -54,14 +52,14 @@ $(document).ready(function(){
           }
   ],
   "language": {
-      "lengthMenu": 'Display <select class="custom-select custom-select form-control form-control">'+
-      '<option hidden>1000</option>'+
-      '<option value="10">10</option>'+
-      '<option value="20">25</option>'+
-      '<option value="50">50</option>'+
-      '<option value="100">100</option>'+
-      '<option value="-1">All</option>'+
-      '</select> records'},
+    "lengthMenu": 'Display <select class="custom-select custom-select form-control form-control">'+
+    '<option hidden>1000</option>'+
+    '<option value="-1">All</option>'+
+    '<option value="10">10</option>'+
+    '<option value="20">25</option>'+
+    '<option value="50">50</option>'+
+    '<option value="100">100</option>'+
+    '</select> records'},
 
   responsive: true,
   fade:true
@@ -154,7 +152,7 @@ $(function(){
         '<input class="form-control" type="text" name="editInsurance'+ EditctrAdd +'"  placeholder="Tugboat Insurance # ' + EditctrAdd + 
         '" id="editInsurance' + EditctrAdd + '" value="" >');
             
-    txtTbInsurance.appendTo('#editTClassInsurance' + EditTClassCtr);
+    txtTbInsurance.appendTo('#editTClassInsurance' + EditTClassCtr).addClass( "animated fadeIn fast" );
 
         EditTClassCtr++;	
         EditctrAdd++;
@@ -183,7 +181,7 @@ $(function(){
           '<input class="form-control" type="text" name="AddInsurance'+ AddctrAdd +'"  placeholder="Tugboat Insurance # ' + AddctrAdd + 
           '" id="AddInsurance' + AddctrAdd + '" value="" >');
               
-    txtTbInsurance.appendTo('#AddTClassInsurance' + AddtClassCtr);
+    txtTbInsurance.appendTo('#AddTClassInsurance' + AddtClassCtr).addClass( "animated fadeIn fast" );
 
           AddtClassCtr++;	
           AddctrAdd++;

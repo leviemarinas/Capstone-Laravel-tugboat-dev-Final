@@ -1,13 +1,4 @@
 
-#addDdChoices, #editDdChoices{
-  width:200px;
-}
-a:link{
-  text-decoration: none;
-}
-.tugboatAssignment, .createSched{
-  display:none;
-}
 .fc-button {
   background: #f4f4f4;
   background-image: none;

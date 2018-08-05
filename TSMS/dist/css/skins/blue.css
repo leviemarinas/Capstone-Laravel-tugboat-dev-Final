@@ -44,6 +44,13 @@
   background-color: #182794 !important;
   color: #fff;
 }
+#moreInfoModal .modal-content{
+  border: solid 2px #182794;
+  border-radius:0px;
+}
+#moreInfoModal .modal-header{
+  border-bottom:solid 1px #182794;
+}
 .bg-primary {
   background-color: #3F52E3 !important;
 }
@@ -154,6 +161,7 @@ a:hover {
 }
 .border-primary {
   border-color: #3F52E3 !important;
+  border: 0.5px solid #3F52E3;
 }
 .text-primary {
   color: #3F52E3 !important;
@@ -178,6 +186,13 @@ a:hover {
 
 .main-sidebar .sidebar-menu li ul.menu-dropdown li.active a {
   color: #3F52E3;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a {
+	color: #505c66;
+	font-weight: 400;
+}
+.main-sidebar .sidebar-menu li ul.menu-dropdown li.inactive a:hover {
+	color: #3F52E3;
 }
 .alert.alert-primary {
   background-color: #3F52E3;
